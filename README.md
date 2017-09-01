@@ -7,6 +7,15 @@
 
 ![Logo](https://raw.githubusercontent.com/deco3500-2017/klub/master/logo.png)
 
+## Content
+1. [Introduction](https://github.com/deco3500-2017/klub/blob/master/README.md#10-introduction)
+2. [Concept](https://github.com/deco3500-2017/klub/blob/master/README.md#20-concept)
+3. [Team](https://github.com/deco3500-2017/klub/blob/master/README.md#30-team)
+4. [Plan](https://github.com/deco3500-2017/klub/blob/master/README.md#40-plan)
+5. [Resources](https://github.com/deco3500-2017/klub/blob/master/README.md#50-resources)
+6. [Tags](https://github.com/deco3500-2017/klub/blob/master/README.md#60-tags)
+
+
 
 ## 1.0 Introduction
 
@@ -120,7 +129,7 @@ If the team member continues to exhibit non-compliance a third time, the issue w
 
 * As we’re going to be following a continuous integration agile approach, it is difficult to layout concrete milestones of content, as deliverables will likely change in response to user feedback. *
 
-### Research & Requirements Elicitation
+### 4.1 Research & Requirements Elicitation
 **Timeframe:** 
 This will be occurring from week 3 to week 6.
 
@@ -130,7 +139,7 @@ We will be doing a user survey to gather feedback on how students currently inte
 **Key Deliverables:**
 From our survey we will be producing a summary of requirements which will document what our surveyed users and executives have indicated as key requirements for the ClubHub system.
 
-### Initial Design
+### 4.2 Initial Design
 **Timeframe:**
 This will be occurring from week 5 to week 7.
 
@@ -141,7 +150,7 @@ We will be deciding on a list of features and functionality that will form the c
 The deliverable here will be in the format of a site map, list and explanation of RESTful endpoints, and their usage, and a database schema.
 
 
-### Construction
+### 4.3 Construction
 **Timeframe:** 
 This will be occurring from week 7 to week 10.
 
@@ -152,7 +161,7 @@ To implement the features decided upon in the Initial Design phase.
 A site in which a user can register, login, view and search clubs in a list, as well as join clubs.
 
 
-### Iterative Design & Construction
+### 4.4 Iterative Design & Construction
 **Timeframe:** 
 This will be beginning in week 10 and culminating in week 13 with featured being delivered throughout.
 
@@ -163,7 +172,7 @@ To expand on the core functionality,in accordance with user's’ needs. The orde
 We will be expanding on the core functionality, adding support for club executives to create events for their clubs, edit club information, adding per club chat rooms, as well as private messaging between users. Adding club discovery portal for new members to enter their interests and be suggested clubs.
 
 
-### Continuous Testing and Validation
+### 4.5 Continuous Testing and Validation
 **Timeframe:**
 This will be done continuously throughout the project.
 
