@@ -121,71 +121,56 @@ If the team member continues to exhibit non-compliance a third time, the issue w
 * As we’re going to be following a continuous integration agile approach, it is difficult to layout concrete milestones of content, as deliverables will likely change in response to user feedback. *
 
 ### Research & Requirements Elicitation
-**Timeframe** 
-
+**Timeframe:** 
 This will be occurring from week 3 to week 6.
 
-**Plan**
-
+**Plan:**
 We will be doing a user survey to gather feedback on how students currently interact with clubs, as well as how clubs’ executive communicate and organise events for their members.
 
-**Key Deliverables**
-
+**Key Deliverables:**
 From our survey we will be producing a summary of requirements which will document what our surveyed users and executives have indicated as key requirements for the ClubHub system.
 
 ### Initial Design
-**Timeframe**
-
+**Timeframe:**
 This will be occurring from week 5 to week 7.
 
-**Plan** 
-
+**Plan:** 
 We will be deciding on a list of features and functionality that will form the core of ClubHub. This will include, among other things (to be decided), a user logging in, browsing clubs, viewing club information, and joining a club.
 
-**Key Deliverables** 
-
+**Key Deliverables:** 
 The deliverable here will be in the format of a site map, list and explanation of RESTful endpoints, and their usage, and a database schema.
 
 
 ### Construction
-**Timeframe** 
-
+**Timeframe:** 
 This will be occurring from week 7 to week 10.
 
-**Plan** 
-
+**Plan:** 
 To implement the features decided upon in the Initial Design phase.
 
-**Key Deliverables** 
-
+**Key Deliverables:** 
 A site in which a user can register, login, view and search clubs in a list, as well as join clubs.
 
 
 ### Iterative Design & Construction
-**Timeframe** 
-
+**Timeframe:** 
 This will be beginning in week 10 and culminating in week 13 with featured being delivered throughout.
 
-**Plan**
-
+**Plan:**
 To expand on the core functionality,in accordance with user's’ needs. The order we do things will be guided by responses from our continuous user testing.
 
-**Key Deliverables**
-
+**Key Deliverables:**
 We will be expanding on the core functionality, adding support for club executives to create events for their clubs, edit club information, adding per club chat rooms, as well as private messaging between users. Adding club discovery portal for new members to enter their interests and be suggested clubs.
 
 
 ### Continuous Testing and Validation
-**Timeframe**
-
+**Timeframe:**
 This will be done continuously throughout the project.
 
-**Plan**
-
+**Plan:**
 Every update to the system will be manually (or autonomously) tested to ensure functionality, as well as fully user tested to ensure that development remains aligned with user goals.
 
-**Key Deliverables**
-
+**Key Deliverables:**
 Throughout the project a major part of Beth’s role will be continuous testing of the system, ensuring that it is fit-for-purpose and intuitive for users.
 These testing iterations will be documented and conclusions used to guide further development.
 
