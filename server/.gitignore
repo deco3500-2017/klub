@@ -7,6 +7,8 @@ bin/
 lib/
 out/
 
+#Database
+clubhub.db
 
 # Gradle
 build/
