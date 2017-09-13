@@ -1,0 +1,30 @@
+.DS_Store
+
+*.swp
+*~
+
+bin/
+lib/
+out/
+
+
+# Gradle
+build/
+.gradle/
+
+# Eclipse
+.project
+.classpath
+.settings
+.metadata
+
+# IntelliJ IDEA
+*.iml
+.idea
+
+# Crash reports
+*.log
+
+# Merge conflicts
+*.orig
+
