@@ -15,6 +15,7 @@ public class Database {
 	private Database() {
 		try {
 			connection = DriverManager.getConnection(url);
+			connection.setAutoCommit(true);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
