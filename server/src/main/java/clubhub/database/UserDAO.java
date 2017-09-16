@@ -27,7 +27,13 @@ public class UserDAO {
 			PreparedStatement statement = Database.getInstance().getConnection().prepareStatement(GET_USER);
 			statement.setString(1, username);
 			ResultSet set = statement.executeQuery();
-			return new User(set.getString(1), set.getString(2), set.getString(3), set.getString(4), set.getString(5));
+			if(!set.isBeforeFirst() ) {
+				set.close();
+				return null;
+			}
+			User result = new User(set.getString(1), set.getString(2), set.getString(3), set.getString(4), set.getString(5));
+			set.close();
+			return result;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -73,9 +79,6 @@ public class UserDAO {
 		return getUser(username);
 		
 	}
-	
-	
-	
 	
 	private static void verifyTable() {
 		Connection connection = Database.getInstance().getConnection();
