@@ -30,3 +30,4 @@ build/
 # Merge conflicts
 *.orig
 
+.pydevproject
