@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import clubhub.database.MembershipDAO;
 import clubhub.database.UserDAO;
+import clubhub.resources.Club;
 import clubhub.resources.User;
 
 @RestController
@@ -48,6 +49,11 @@ public class Controller {
 		clubs.add("Pizza Appreciation Society");
 		clubs.add("Spaghetti Fan Club");
 		return clubs;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/clubs/{clubname}")
+	public Club club(@PathVariable String clubname) {
+		return new Club("robogals", "Robogals UQ", "Summary", new ArrayList<String>(), "images/robogals.png", 2.0f, new ArrayList<String>());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/clubs/{clubname}/members/{username}")
