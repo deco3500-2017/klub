@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-
 import clubhub.resources.User;
 
 public class MembershipDAO {
@@ -22,13 +22,42 @@ public class MembershipDAO {
 
 	private static final String UPDATE_USER = "UPDATE membership set status = ?\n"
 			+ " WHERE username = ? AND clubname = ?;";
+	
+	private static final String GET_MEMBERS = "SELECT username FROM membership WHERE clubname = ?;";
+	private static final String GET_EXECUTIVES = "SELECT username FROM membership WHERE clubname = ? AND status = 1;";
 
-	public static List<User> getMembers(String clubname) {
-		return null;
+
+	public static List<String> getMembers(String clubname) {
+		return getMemberType(clubname, GET_MEMBERS);
 	}
 
-	public static List<User> getExecutives(String clubname) {
-		return null;
+	public static List<String> getExecutives(String clubname) {
+		return getMemberType(clubname, GET_EXECUTIVES);
+	}
+	
+	private static List<String> getMemberType(String clubname, String query){
+		verifyTable();
+		List<String> result = new ArrayList<String>();
+		try {
+			PreparedStatement statement = Database.getInstance().getConnection().prepareStatement(query);
+			statement.setString(1, clubname);
+			ResultSet set = statement.executeQuery();
+
+			if (!set.isBeforeFirst()) {
+				set.close();
+				return result;
+			}
+			while(set.next()) {
+				result.add(set.getString(1));
+				System.out.println("Found member: " + set.getString(1));
+
+			}
+			set.close();
+			return result;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	public static boolean isMember(String username, String clubname) {
