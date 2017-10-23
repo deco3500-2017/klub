@@ -18,21 +18,21 @@ def add_user(user):
 		data={'username': user[0], 'password': user[1], 'name': user[2], 'email': user[3], 'studentNumber': user[4]})
 
 	if request.status_code != 200:
-		print 'Status', request.status_code, 'on adding user', username
+		print ('Status', request.status_code, 'on adding user', username)
 
 
 def add_member(member):
 	request = requests.post(ADD_MEMBER_URL.format(member[1], member[0]), data={})
 
 	if request.status_code != 200:
-		print 'Status', request.status_code, 'on adding member', username, 'to club', member[1]
+		print ('Status', request.status_code, 'on adding member', username, 'to club', member[1])
 
 
 def add_executive(executive):
 	request = requests.post(ADD_EXECUTIVE_URL.format(executive[1], executive[0]), data={})
 
 	if request.status_code != 200:
-		print 'Status', request.status_code, 'on adding executive', username, 'to club', executive[1]
+		print ('Status', request.status_code, 'on adding executive', username, 'to club', executive[1])
 
 
 if __name__ == "__main__":

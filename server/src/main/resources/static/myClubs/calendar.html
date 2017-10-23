@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Calendar</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+        function GetURLParameter(sParam){
+		   var sPageURL = window.location.search.substring(1);
+		   var sURLVariables = sPageURL.split('&');
+		   for (var i = 0; i < sURLVariables.length; i++){
+		       var sParameterName = sURLVariables[i].split('=');
+		       if (sParameterName[0] == sParam){
+		            return sParameterName[1];
+		       }
+		    }
+		}
+    </script>
+    <style>
+	    /* Dropdown Button */
+	.dropbtn {
+	    background-color: #4CAF50;
+	    color: white;
+	    padding: 16px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	}
+	
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+	
+	</style>
+</head>
+<body>
+<div class="topnav" id="menu">
+		<a class="dropbtn" href="#about">About</a>
+	  	<a class="dropbtn" href="../../explore/search.html">Explore</a>
+		<div class="dropdown">
+		<button class="dropbtn">My Clubs</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../myClubs/calendar.html">Calendar</a>
+	    		<a href="../../myClubs/chat.html">Chat</a>
+	  		</div>
+  		</div>
+  		<div class="dropdown">
+		 	<button class="dropbtn">Executive</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../executive/clubs.html">Calendar</a>
+	    		<a href="../../executive/events.html">Chat</a>
+	    		<a href="../../executive/bbq.html">Events</a>
+	  		</div>
+  		</div>
+	</div>
+
+
+<iframe 
+src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=uqclubhub%40gmail.com&amp;color=%231B887A&amp;ctz=Australia%2FBrisbane" 
+style="border-width:0" width="800" height="600" frameborder="0" scrolling="no">
+</iframe>
+
+</body>
+</html>
+

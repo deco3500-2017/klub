@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Clubington Hubington</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="script.js"></script>-->
+	<script>
+    $(document).ready(function() {
+        String.prototype.format = function () {
+			var args = arguments;
+			return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
+			if (m == "{{") { return "{"; }
+			if (m == "}}") { return "}"; }
+			return args[n];
+ 			});
+		};	
+		
+    });
+    </script>
+  </head>
+  <body>
+	<form id="logonForm">
+	  <div id="logonDiv" class="container">
+	  
+		<label><b>Username</b></label>
+		<input id="username" type="text" required>
+
+		<label><b>Password</b></label>
+		<input id="password" type="password" required>
+
+		<button id="login" type="submit">Login</button>
+		
+		<div id="errorDiv"></div>
+		
+		<script>
+		$("#logonForm").submit(function(){
+			event.preventDefault();
+			verifyUser();
+		});
+		
+		function verifyUser() {
+			var URL= "users/{0}".format($("#username").val());
+			$.get(URL)
+			.done(function(data, status){
+				if(data.password == $("#password").val()) {
+					localStorage.setItem("username", $("#username").val());
+					window.location.href = "home.html";
+				} else {
+					$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
+				}
+			});
+		}
+		</script>
+		
+	  </div>
+	  </form>
+	  <form id="createAccountForm">
+	  <div class="container" style="background-color:#f1f1f1">
+	  	<p>Create an account</p>
+	  		
+	  	<label><b>Name</b></label>
+		<input id="name" type="text" required>
+	  	
+	  	<br>
+	  	
+	  	<label><b>Username</b></label>
+		<input id="username" type="text" required>
+
+		<br>
+
+		<label><b>Password</b></label>
+		<input id="password" type="password" required>
+		
+		<br>
+		
+		<label><b>UQ email</b></label>
+		<!--TODO: verify email domain-->
+		<input id="email" type="text" required>
+		
+		<br>
+		
+		<label><b>Student Number</b></label>
+		<!--verify 8 number-->
+		<input id="studentNumber" type="text" required>
+
+		<br>
+		
+		<button id="createAccount" type="submit">Create Account</button>
+		
+		<script>
+		$("#createAccountForm").submit(function(){
+		console.log("submitting");
+			event.preventDefault();
+			createAccount();
+		});
+		
+		function createAccount() {
+			var URL= "users";
+			<!--TODO: check for duplicate users-->
+			$.post(URL, { username: $("#username").val(), password: $("#password").val(),
+				name: $("#name").val(), email: $("#email").val(), 
+				studentNumber: $("#studentNumber").val()})
+			.done(function(data, status) {
+				$("#createAccountForm").trigger("reset");
+				alert("You have successfully registered. Please login above.");				
+			});
+		};
+		
+		</script>
+	  </div>
+	  </form>
+  </body>
+</html>

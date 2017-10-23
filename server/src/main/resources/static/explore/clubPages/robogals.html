@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Robogals</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="script.js"></script>-->
+	<script>
+    $(document).ready(function() {
+        String.prototype.format = function () {
+			var args = arguments;
+			return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
+			if (m == "{{") { return "{"; }
+			if (m == "}}") { return "}"; }
+			return args[n];
+ 			});
+		};	
+    });
+    </script>
+        <style>
+	    /* Dropdown Button */
+	.dropbtn {
+	    background-color: #4CAF50;
+	    color: white;
+	    padding: 16px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	}
+	
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="topnav" id="menu">
+		<a class="dropbtn" href="#about">About</a>
+	  	<a class="dropbtn" href="../../../explore/search.html">Explore</a>
+		<div class="dropdown">
+		<button class="dropbtn">My Clubs</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../../myClubs/calendar.html">Calendar</a>
+	    		<a href="../../../myClubs/chat.html">Chat</a>
+	  		</div>
+  		</div>
+  		<div class="dropdown">
+		 	<button class="dropbtn">Executive</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../../executive/clubs.html">Calendar</a>
+	    		<a href="../../../executive/events.html">Chat</a>
+	    		<a href="../../../executive/bbq.html">Events</a>
+	  		</div>
+  		</div>
+	</div>
+	<br>
+
+	<h1>ROBOGALS</h1>
+	<p>	
+	<strong>Interests:</strong> 
+	Volunteering, Teaching, Networking, Socialising
+	<br />			
+	<strong>Membership Fees:</strong> $2
+	<br />
+	<br />
+	<a href="http://brisbane.robogals.org.au/">http://brisbane.robogals.org.au/</a><br />
+	<a href="https://www.facebook.com/groups/robogalsVolunteers/">https://www.facebook.com/groups/robogalsVolunteers/</a><br />
+	<a href="https://twitter.com/RobogalsUQ"> https://twitter.com/RobogalsUQ</a><br />
+	</p>
+	
+	<h4>We encourage school aged girls to pursue Science, Technology, Engineering and Math (STEM) through holding workshops at schools, universities and libraries because <em>diversity drives innovation</em>.</h4>
+	<p>We have a friendly, warm and genuine culture which provides support for club members. Robogals offers opportunities to develop skills such as public speaking and communication skills. Additionally, we connect university students to companies that value a gender inclusive workplace.</p>
+	<p>All faculties are welcome as we provide training.</p>
+	<p>Throughout the year, Robogals holds numerous events including: (all events are not age restrictive)</p>
+	<ul type="disc">
+	<li><span style="text-decoration: underline;">Launch nights</span> welcoming volunteers with pizza and board games.</li>
+	<li>Volunteer-run <span style="text-decoration: underline;">workshops</span> for school students</li>
+	<li><span style="text-decoration: underline;">Rural trips</span>&nbsp;where volunteers travel to rural Queensland for a week to inspire young minds. Past locations have included: Sunshine Coast, Gladstone and Townsville*</li>
+	<li>An <span style="text-decoration: underline;">Industry Gala</span> to connect university students to companies that value a gender inclusive workplace</li>
+	<li><span style="text-decoration: underline;">Social events</span>: from having lunch to bowling and laser tag!</li>
+	</ul>
+	<p>To find out more:</p>
+	<ul type="disc">
+	<li>Join our Facebook group <a href="https://www.facebook.com/groups/robogalsVolunteers/">www.facebook.com/groups/robogalsVolunteers/</a></li>
+	<li>Send us an email at: <a href="/cdn-cgi/l/email-protection#5e2b2f702a2c3f37303730391e2c313c31393f322d70312c39"><span class="__cf_email__" data-cfemail="0c797d22787e6d656265626b4c7e636e636b6d607f22637e6b">[email&#160;protected]</span></a></li>
+	</ul>
+	<p>*Rural trips are free for Robogals members</p>
+</body>
+</html>
+
