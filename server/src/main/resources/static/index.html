@@ -16,110 +16,192 @@
 		};	
     });
     </script>
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-min.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-	<form id="logonForm">
-	  <div id="logonDiv" class="container">
-	  
-		<label><b>Username</b></label>
-		<input id="username" type="text" required>
+   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  
+  	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#loginFormSection">Login</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#register">Register</a>
+		      </li>
+		    </ul>
+		  </div>
+	</nav>
+	
+	<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
 
-		<label><b>Password</b></label>
-		<input id="password" type="password" required>
+          // Store hash
+          var hash = this.hash;
 
-		<button id="login" type="submit">Login</button>
-		
-		<div id="errorDiv"></div>
-		
-		<script>
-		$("#logonForm").submit(function(){
-			event.preventDefault();
-			verifyUser();
-		});
-		
-		function verifyUser() {
-			var URL= "users/{0}".format($("#username").val());
-			alert($("#username").val());
-			$.get(URL)
-			.done(function(data, status){
-				alert("verifying");
-				alert("data is: " + data.username);
-				if(data.password == $("#password").val()) {
-					localStorage.clear("username");
-					localStorage.setItem("username", $("#username").val());
-					console.log(localStorage.getItem("username"));
-				} else {
-					$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 600, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+      
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+        });
+      });
+    });
+  </script>
+  
+
+  
+  	<div class="container-fluid" id="home">
+  		<div class="row">
+ 			<div class="col sm-4 col-sm-offset-4">
+  				<img id="clubHubLogo" src="img/logo.png" alt="Club Hub Logo Image">
+  			</div>
+  		</div>
+    </div>
+  
+
+	<div class="container-fluid" id="loginFormSection">
+		<div class="row">
+			<div class="col-sm-2 col-sm-offset-5">
+				<h1>Login</h1>
+			</div>
+		</div>
+  		<form id="logonForm">
+	  		<div id="logonDiv" class="container">
+	  			<div class="form-group">
+					<label for="username">Username</label>
+					<input class="form-control" id="username" type="text" required>
+				</div>
+	
+				<div class="form-group">
+					<label for="password"><b>Password</b></label>
+					<input class="form-control" id="password" type="password" required>
+				</div>
+				
+				<button id="login" type="submit">Login</button>
+			
+				<div id="errorDiv"></div>
+			
+				<script>
+				$("#logonForm").submit(function(){
+					event.preventDefault();
+					verifyUser();
+				});
+				
+				function verifyUser() {
+					var URL= "users/{0}".format($("#username").val());
+					$.get(URL)
+					.done(function(data, status){
+							if(data.password == $("#password").val()) {
+							localStorage.clear("username");
+							localStorage.setItem("username", $("#username").val());
+							console.log(localStorage.getItem("username"));
+						} else {
+							$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
+						}
+					})
+					.then(function(result){
+						var URL = "/users/{0}/clubs/member".format(localStorage.getItem("username"));
+						return $.get(URL);				
+					})
+					.then(function(result){
+						localStorage.setItem("clubs", result.toString());
+						window.location.href = "home.html";
+					});
 				}
-			})
-			.then(function(result){
-				var URL = "/users/{0}/clubs/member".format(localStorage.getItem("username"));
-				return $.get(URL);				
-			})
-			.then(function(result){
-				localStorage.setItem("clubs", result.toString());
-				window.location.href = "home.html";
-			});
-		}
-		</script>
+				</script>
 		
-	  </div>
-	  </form>
-	  <form id="createAccountForm">
-	  <div class="container" style="background-color:#f1f1f1">
-	  	<p>Create an account</p>
-	  		
-	  	<label><b>Name</b></label>
-		<input id="name" type="text" required>
+	 	 	</div>
+	  	</form>
+	 </div>
+
+	
+  <div class="container-fluid" id="register">
+		<div class="row">
+			<div class="col-sm-2 col-sm-offset-5">
+				<h1>Register</h1>
+			</div>
+		</div>
+			
+	  	<form id="createAccountForm">
+
+		  	<div class="form-group">
+				<label for="name">Name</label>
+				<input class="form-control" id="name" type="text" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input class="form-control" id="username" type="text" required>
+			</div>
+		  
+		 	<div class="form-group">
+				<label for="password">Password</label>
+				<input class="form-control" id="password" type="password" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="email">UQ Email</label>
+				<input class="form-control" id="email" type="text" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="studentNumber">Student Number</label>
+				<input class="form-control" id="studentNumber" type="text" maxlength='8' required>
+			</div>
+			
+			<button id="createAccount" type="submit">Create Account</button>
+			
+			<script>
+				<!-- TODO: form validation -->
+				
+				$("#createAccountForm").submit(function(){
+				console.log("submitting");
+					event.preventDefault();
+					createAccount();
+				});
+				
+				function createAccount() {
+					var URL= "users";
+					<!--TODO: check for duplicate users-->
+					$.post(URL, { username: $("#username").val(), password: $("#password").val(),
+						name: $("#name").val(), email: $("#email").val(), 
+						studentNumber: $("#studentNumber").val()})
+					.done(function(data, status) {
+						$("#createAccountForm").trigger("reset");
+						alert("You have successfully registered. Please login above.");				
+					});
+				};
+			</script>
 	  	
-	  	<br>
-	  	
-	  	<label><b>Username</b></label>
-		<input id="username" type="text" required>
-
-		<br>
-
-		<label><b>Password</b></label>
-		<input id="password" type="password" required>
-		
-		<br>
-		
-		<label><b>UQ email</b></label>
-		<!--TODO: verify email domain-->
-		<input id="email" type="text" required>
-		
-		<br>
-		
-		<label><b>Student Number</b></label>
-		<!--verify 8 number-->
-		<input maxlength='8' id="studentNumber" type="text" required>
-
-		<br>
-		
-		<button id="createAccount" type="submit">Create Account</button>
-		
-		<script>
-		<!-- TODO: form validation -->
-		
-		$("#createAccountForm").submit(function(){
-		console.log("submitting");
-			event.preventDefault();
-			createAccount();
-		});
-		
-		function createAccount() {
-			var URL= "users";
-			<!--TODO: check for duplicate users-->
-			$.post(URL, { username: $("#username").val(), password: $("#password").val(),
-				name: $("#name").val(), email: $("#email").val(), 
-				studentNumber: $("#studentNumber").val()})
-			.done(function(data, status) {
-				$("#createAccountForm").trigger("reset");
-				alert("You have successfully registered. Please login above.");				
-			});
-		};
-		</script>
-	  </div>
-	  </form>
+	  	</form>
+	  
+	 </div>
   </body>
 </html>
