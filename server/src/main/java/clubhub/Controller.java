@@ -23,6 +23,21 @@ public class Controller {
 	/*
 	 * Users endpoints
 	 */
+	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/member")
+	public List<String> userClubs(@PathVariable String username) {
+		List<String> clubs = new ArrayList<String>();
+		clubs.add("doglovers");
+		clubs.add("robogals");
+		clubs.add("uqrobotics");
+		return clubs;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/executive")
+	public List<String> userExecutive(@PathVariable String username) {
+		List<String> clubs = new ArrayList<String>();
+		clubs.add("uqrobotics");
+		return clubs;
+	}
 
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}")
 	public User user(@PathVariable String username) {

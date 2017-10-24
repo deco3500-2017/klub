@@ -25,7 +25,6 @@ public class Club {
 		this.logo = logo;
 		this.membershipPrice = membershipPrice;
 		this.tags = tags;
-
 	}
 
 	/**
