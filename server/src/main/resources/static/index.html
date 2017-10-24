@@ -14,7 +14,6 @@
 			return args[n];
  			});
 		};	
-		
     });
     </script>
   </head>
@@ -40,16 +39,21 @@
 		
 		function verifyUser() {
 			var URL= "users/{0}".format($("#username").val());
+			alert($("#username").val());
 			$.get(URL)
 			.done(function(data, status){
+				alert("verifying");
+				alert("data is: " + data.username);
 				if(data.password == $("#password").val()) {
+					localStorage.clear("username");
 					localStorage.setItem("username", $("#username").val());
+					console.log(localStorage.getItem("username"));
 				} else {
 					$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
 				}
 			})
 			.then(function(result){
-				var URL = "{0}/clubs".format(localStorage.getItem("username"));
+				var URL = "/users/{0}/clubs/member".format(localStorage.getItem("username"));
 				return $.get(URL);				
 			})
 			.then(function(result){

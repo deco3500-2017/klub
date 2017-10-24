@@ -9,9 +9,9 @@ users = [('MegaBeth', 'ilovecats', 'Beth Cave', 'beth@clubcub.com', 's1234567'),
 		('Leggy', 'iloveducks', 'Lachlan Healey', 'leggy@cluhub.com', 's1234555'),
 		('krista', '<3cats', 'Krista Harrison', 'someemail', 's1231232')]
 
-members = [('MegaBeth', 'cats')]
+members = [('MegaBeth', 'robogals')]
 
-executives = [('krista', 'cats')]
+executives = [('krista', 'robogals')]
 
 def add_user(user):
 	request = requests.post(ADD_USER_URL, 

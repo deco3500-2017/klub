@@ -16,6 +16,16 @@
  			});
 		};	
     });
+    
+    $(document).ready(function() {
+    	var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
+    	$.get(URL)
+    	.done(function(data, status){
+    		if (!$.trim(data)){   
+    			$("#execMenu").hide();
+    		}
+    	})
+    });
     </script>
         <style>
 	    /* Dropdown Button */
@@ -100,10 +110,20 @@
 	<button id="joinClub">Join Robogals</button>
 	<script>
 		$("#joinClub").click(function(){
-			var URL = "/clubs/{0}/members/{0]".format(club, localStorage.get("username"));
-			$.get(URL)
+			var URL = "/clubs/{0}/members/{1}".format(club, localStorage.getItem("username"));
+			var statusString;
+			$.post(URL)
 			.done(function(data, status){
-				alert(data + "status: " + status);
+				statusString = status.toString();
+			})
+			.then(function(result){
+				return $.get("/clubs/{0}/executives/".format(club));
+			})
+			.then(function(result){
+				alert(result);
+				alert(statusString + "\nPlease contact one of the following members" + 
+						" to pay your membership fee or troubleshoot difficulties in" +
+						" joining this club: \n" + result);
 			})
 		});
 	</script>

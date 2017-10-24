@@ -6,7 +6,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--<script type="text/javascript" src="script.js"></script>-->
 	<script>
-    $(document).ready(function() {
+	$(document).ready(function() {
         String.prototype.format = function () {
 			var args = arguments;
 			return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
@@ -15,6 +15,16 @@
 			return args[n];
  			});
 		};	
+    });
+    
+    $(document).ready(function() {
+    	var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
+    	$.get(URL)
+    	.done(function(data, status){
+    		if (!$.trim(data)){   
+    			$("#execMenu").hide();
+    		}
+    	})
     });
     </script>
     <style>
@@ -101,7 +111,7 @@
 				$.each(data, function(index, value) {
 					if(value.match(search) != null) {
 						resultsNum++;
-						clubs = clubs + value + '<br />';
+						clubs = clubs + "<a href=" + "'clubPages/robogals.html'>" + value + '</a>' + '<br />';
 					}
 				});
 				if (resultsNum > 0) {

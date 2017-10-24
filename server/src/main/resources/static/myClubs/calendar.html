@@ -4,16 +4,26 @@
     <title>Calendar</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script>
-        function GetURLParameter(sParam){
-		   var sPageURL = window.location.search.substring(1);
-		   var sURLVariables = sPageURL.split('&');
-		   for (var i = 0; i < sURLVariables.length; i++){
-		       var sParameterName = sURLVariables[i].split('=');
-		       if (sParameterName[0] == sParam){
-		            return sParameterName[1];
-		       }
-		    }
-		}
+	    $(document).ready(function() {
+	        String.prototype.format = function () {
+				var args = arguments;
+				return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
+				if (m == "{{") { return "{"; }
+				if (m == "}}") { return "}"; }
+				return args[n];
+	 			});
+			};	
+	    });
+	    
+        $(document).ready(function() {
+        	var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
+        	$.get(URL)
+        	.done(function(data, status){
+        		if (!$.trim(data)){   
+        			$("#execMenu").hide();
+        		}
+        	})
+        });
     </script>
     <style>
 	    /* Dropdown Button */

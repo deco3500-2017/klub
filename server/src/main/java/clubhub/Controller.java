@@ -35,7 +35,9 @@ public class Controller {
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/executive")
 	public List<String> userExecutive(@PathVariable String username) {
 		List<String> clubs = new ArrayList<String>();
-		clubs.add("uqrobotics");
+		if (username.equals("Leggy")) {
+			clubs.add("robogals");
+		}
 		return clubs;
 	}
 
