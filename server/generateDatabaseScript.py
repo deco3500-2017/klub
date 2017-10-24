@@ -11,7 +11,7 @@ users = [('MegaBeth', 'ilovecats', 'Beth Cave', 'beth@clubcub.com', 's1234567'),
 
 members = [('MegaBeth', 'robogals')]
 
-executives = [('krista', 'robogals')]
+executives = [('Leggy', 'robogals')]
 
 def add_user(user):
 	request = requests.post(ADD_USER_URL, 

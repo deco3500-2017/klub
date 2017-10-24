@@ -1,1 +1,133 @@
-<!--  place to display calendar + add events to calendar for clubs of which user is an exec -->
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Calendar</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../codebase/dhtmlxscheduler.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../../codebase/dhtmlxscheduler.css" type="text/css">
+    <script>   
+	    $(document).ready(function() {
+	        String.prototype.format = function () {
+				var args = arguments;
+				return this.replace(/\{\{|\}\}|\{(\d+)\}/g, function (m, n) {
+				if (m == "{{") { return "{"; }
+				if (m == "}}") { return "}"; }
+				return args[n];
+	 			});
+			};	
+	    });
+	    
+	    var exec = true;
+    	$(document).ready(function(){
+    		var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
+        	$.get(URL)
+        	.done(function(data, status){
+        		if (!$.trim(data)){  
+        			
+        			exec = false;
+        		}
+        		if(!exec) {
+        			$("#execMenu").hide();
+            	}
+        		scheduler.config.readonly = !(exec);
+        		scheduler.init('scheduler_here',new Date(2018,0,1),"week");
+        	})		
+    	});
+
+    </script>
+    <style>
+	    /* Dropdown Button */
+	.dropbtn {
+	    background-color: #4CAF50;
+	    color: white;
+	    padding: 16px;
+	    font-size: 16px;
+	    border: none;
+	    cursor: pointer;
+	}
+	
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #f9f9f9;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+	
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+	
+	</style>
+	
+	<style type="text/css" media="screen">
+    html, body{
+        margin:0px;
+        padding:0px;
+        height:100%;
+        overflow:hidden;
+    }   
+	</style>
+</head>
+
+<body>
+<div class="topnav" id="menu">
+		<a class="dropbtn" href="../../home.html">About</a>
+	  	<a class="dropbtn" href="../../explore/search.html">Explore</a>
+		<div class="dropdown">
+		<button class="dropbtn">My Clubs</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../myClubs/calendar.html">Calendar</a>
+	    		<a href="../../myClubs/chat.html">Chat</a>
+	  		</div>
+  		</div>
+  		<div class="dropdown" id="execMenu">
+		 	<button class="dropbtn">Executive</button>
+	  		<div class="dropdown-content">
+	    		<a href="../../executive/clubs.html">Calendar</a>
+	    		<a href="../../executive/events.html">Chat</a>
+	    		<a href="../../executive/bbq.html">Events</a>
+	  		</div>
+  		</div>
+	</div>
+
+<div id="scheduler_here" class="dhx_cal_container" style='width:100%; height:100%;'>
+    <div class="dhx_cal_navline">
+        <div class="dhx_cal_prev_button">&nbsp;</div>
+        <div class="dhx_cal_next_button">&nbsp;</div>
+        <div class="dhx_cal_today_button"></div>
+        <div class="dhx_cal_date"></div>
+        <div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
+        <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+        <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
+    </div>
+    <div class="dhx_cal_header"></div>
+    <div class="dhx_cal_data"></div>       
+</div>
+
+
+
+</body>
+</html>
+
