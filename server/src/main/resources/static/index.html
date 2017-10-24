@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Clubington Hubington</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="script.js"></script>-->
 	<script>
     $(document).ready(function() {
         String.prototype.format = function () {
@@ -45,10 +44,17 @@
 			.done(function(data, status){
 				if(data.password == $("#password").val()) {
 					localStorage.setItem("username", $("#username").val());
-					window.location.href = "home.html";
 				} else {
 					$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
 				}
+			})
+			.then(function(result){
+				var URL = "{0}/clubs".format(localStorage.getItem("username"));
+				return $.get(URL);				
+			})
+			.then(function(result){
+				localStorage.setItem("clubs", result.toString());
+				window.location.href = "home.html";
 			});
 		}
 		</script>
@@ -82,13 +88,15 @@
 		
 		<label><b>Student Number</b></label>
 		<!--verify 8 number-->
-		<input id="studentNumber" type="text" required>
+		<input maxlength='8' id="studentNumber" type="text" required>
 
 		<br>
 		
 		<button id="createAccount" type="submit">Create Account</button>
 		
 		<script>
+		<!-- TODO: form validation -->
+		
 		$("#createAccountForm").submit(function(){
 		console.log("submitting");
 			event.preventDefault();
@@ -106,7 +114,6 @@
 				alert("You have successfully registered. Please login above.");				
 			});
 		};
-		
 		</script>
 	  </div>
 	  </form>

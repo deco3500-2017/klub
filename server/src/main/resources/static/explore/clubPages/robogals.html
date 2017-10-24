@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <title>Robogals</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!--<script type="text/javascript" src="script.js"></script>-->
 	<script>
+	var club = "robogals";
+	
     $(document).ready(function() {
         String.prototype.format = function () {
 			var args = arguments;
@@ -63,7 +64,7 @@
 </head>
 <body>
 	<div class="topnav" id="menu">
-		<a class="dropbtn" href="#about">About</a>
+		<a class="dropbtn" href="../../../home.html">About</a>
 	  	<a class="dropbtn" href="../../../explore/search.html">Explore</a>
 		<div class="dropdown">
 		<button class="dropbtn">My Clubs</button>
@@ -95,6 +96,19 @@
 	<a href="https://www.facebook.com/groups/robogalsVolunteers/">https://www.facebook.com/groups/robogalsVolunteers/</a><br />
 	<a href="https://twitter.com/RobogalsUQ"> https://twitter.com/RobogalsUQ</a><br />
 	</p>
+	
+	<button id="joinClub">Join Robogals</button>
+	<script>
+		$("#joinClub").click(function(){
+			var URL = "/clubs/{0}/members/{0]".format(club, localStorage.get("username"));
+			$.get(URL)
+			.done(function(data, status){
+				alert(data + "status: " + status);
+			})
+		});
+	</script>
+	
+	
 	
 	<h4>We encourage school aged girls to pursue Science, Technology, Engineering and Math (STEM) through holding workshops at schools, universities and libraries because <em>diversity drives innovation</em>.</h4>
 	<p>We have a friendly, warm and genuine culture which provides support for club members. Robogals offers opportunities to develop skills such as public speaking and communication skills. Additionally, we connect university students to companies that value a gender inclusive workplace.</p>
