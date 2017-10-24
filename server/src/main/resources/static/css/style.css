@@ -53,6 +53,10 @@ p {
 	margin-top:5%;
 }
 
+#instructionText {
+	padding-top:2%;
+}
+
 #aboutClubHub {
 	margin-top:5%;
 }
@@ -71,4 +75,41 @@ p {
 
 #resultsDisplay a {
 	color:black;
+}
+
+#robogalsTitle {
+	margin-top:5%;
+}
+
+#interestsTitle {
+	font-size:3vh;
+}
+
+#robogalsLinks {
+	padding-left:8%;
+	margin-top:2%;
+	
+}
+
+.robogalsAbout {
+	margin-top:2%;
+}
+
+.aboutText {
+	text-align:left;
+}
+
+#facebookLogo{
+	width:50px;
+	padding:1%;
+}
+
+#twitterLogo{
+	width:50px;
+	padding:1%;
+}
+
+#webLogo {
+	width:50px;
+	padding:1%;
 }
