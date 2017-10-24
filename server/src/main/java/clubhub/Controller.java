@@ -26,12 +26,12 @@ public class Controller {
 	 */
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/member")
 	public List<String> userClubs(@PathVariable String username) {
-		return ClubDAO.getUsersClubs(username);
+		return MembershipDAO.getUsersClubs(username);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/executive")
 	public List<String> userExecutive(@PathVariable String username) {
-		return ClubDAO.getUsersClubsExecutive(username);
+		return MembershipDAO.getUsersClubsExecutive(username);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}")

@@ -132,23 +132,6 @@ public class ClubDAO {
 		}
 	}
 
-	public static List<String> getUsersClubs(String username) {
-		// TODO Auto-generated method stub
-		List<String> clubs = new ArrayList<String>();
-		clubs.add("doglovers");
-		clubs.add("robogals");
-		clubs.add("uqrobotics");
-		return clubs;
-	}
-
-	public static List<String> getUsersClubsExecutive(String username) {
-		// TODO Auto-generated method stub
-		List<String> clubs = new ArrayList<String>();
-		if (username.equals("Leggy")) {
-			clubs.add("robogals");
-		}
-		return clubs;
-	}
 
 
 }

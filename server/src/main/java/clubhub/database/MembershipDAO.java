@@ -25,6 +25,11 @@ public class MembershipDAO {
 	
 	private static final String GET_MEMBERS = "SELECT username FROM membership WHERE clubname = ?;";
 	private static final String GET_EXECUTIVES = "SELECT username FROM membership WHERE clubname = ? AND status = 1;";
+	
+	private static final String GET_CLUBS = "SELECT clubname FROM membership WHERE username = ?;";
+	
+	private static final String GET_CLUBS_EXECUTIVE = "SELECT clubname FROM membership WHERE username = ? AND status = 1;";
+
 
 
 	public static List<String> getMembers(String clubname) {
@@ -197,6 +202,37 @@ public class MembershipDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+
+	public static List<String> getUsersClubs(String username) {
+		return getUsers(username, GET_CLUBS);
+	}
+
+	public static List<String> getUsersClubsExecutive(String username) {
+		return getUsers(username, GET_CLUBS_EXECUTIVE);
+	}
+	
+	
+	public static List<String> getUsers(String username, String query){
+		verifyTable();
+		List<String> result = new ArrayList<String>();
+		try {
+			PreparedStatement statement = Database.getInstance().getConnection().prepareStatement(query);
+			statement.setString(1, username);
+			ResultSet set = statement.executeQuery();
+
+			if (set.isBeforeFirst()) {
+				while(set.next()) {
+					result.add(set.getString(1));
+				}
+			}
+			set.close();
+			return result;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 }
