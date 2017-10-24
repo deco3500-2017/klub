@@ -16,6 +16,23 @@
  			});
 		};	
     });
+    
+    var exec = true;
+	$(document).ready(function(){
+		var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
+    	$.get(URL)
+    	.done(function(data, status){
+    		if (!$.trim(data)){  
+    			exec = false;
+    		}
+    		if(!exec) {
+    			$("#execMenu").hide();
+        	}
+    		scheduler.config.readonly = !(exec);
+    		<!--combo box or radio buttons here -->	
+    		scheduler.init('scheduler_here',new Date(2018,0,1),"week");
+    	})		
+	});
 
     </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -40,7 +57,7 @@
         		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
         		aria-haspopup="true" aria-expanded="false">My Clubs</a>
        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          			<a class="dropdown-item" href="../../myClubs/calendar/html">Calendar</a>
+          			<a class="dropdown-item" href="../../myClubs/calendar.html">Calendar</a>
           			<a class="dropdown-item" href="../../myClubs/chat.html">Chat</a>
         		</div>
       		 </li>
@@ -48,9 +65,8 @@
         		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
         		aria-haspopup="true" aria-expanded="false">Executive</a>
        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          			<a class="dropdown-item" href="../myClubs/calendar/html">Calendar</a>
-          			<a class="dropdown-item" href="../myClubs/chat.html">Chat</a>
-          			<a class="dropdown-item" href="../myClubs/chat.html">Events</a>
+          			<a class="dropdown-item" href="../../executive/events.html">Events</a>
+          			<a class="dropdown-item" href="../../myClubs/chat.html">Chat</a>
         		</div>
       		 </li>
 		    </ul>
