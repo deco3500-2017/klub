@@ -16,118 +16,102 @@
  			});
 		};	
     });
-    
-    $(document).ready(function() {
-    	var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
-    	$.get(URL)
-    	.done(function(data, status){
-    		if (!$.trim(data)){   
-    			$("#execMenu").hide();
-    		}
-    	})
-    });
+   
     </script>
-    <style>
-	    /* Dropdown Button */
-	.dropbtn {
-	    background-color: #4CAF50;
-	    color: white;
-	    padding: 16px;
-	    font-size: 16px;
-	    border: none;
-	    cursor: pointer;
-	}
-	
-	/* The container <div> - needed to position the dropdown content */
-	.dropdown {
-	    position: relative;
-	    display: inline-block;
-	}
-	
-	/* Dropdown Content (Hidden by Default) */
-	.dropdown-content {
-	    display: none;
-	    position: absolute;
-	    background-color: #f9f9f9;
-	    min-width: 160px;
-	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	    z-index: 1;
-	}
-	
-	/* Links inside the dropdown */
-	.dropdown-content a {
-	    color: black;
-	    padding: 12px 16px;
-	    text-decoration: none;
-	    display: block;
-	}
-	
-	/* Change color of dropdown links on hover */
-	.dropdown-content a:hover {background-color: #f1f1f1}
-	
-	/* Show the dropdown menu on hover */
-	.dropdown:hover .dropdown-content {
-	    display: block;
-	}
-	
-    </style>
+    
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap-min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </head>
   <body>
-	<div class="topnav" id="menu">
-		<a class="dropbtn" href="../../home.html">About</a>
-	  	<a class="dropbtn" href="../../explore/search.html">Explore</a>
-		<div class="dropdown">
-		<button class="dropbtn">My Clubs</button>
-	  		<div class="dropdown-content">
-	    		<a href="../../myClubs/calendar.html">Calendar</a>
-	    		<a href="../../myClubs/chat.html">Chat</a>
-	  		</div>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="../home.html">About</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="../explore/search.html">Explore</a>
+		      </li>
+		      <li class="nav-item dropdown">
+        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+        		aria-haspopup="true" aria-expanded="false">My Clubs</a>
+       			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          			<a class="dropdown-item" href="../myClubs/calendar/html">Calendar</a>
+          			<a class="dropdown-item" href="../myClubs/chat.html">Chat</a>
+        		</div>
+      		 </li>
+      		 <li id="execMenu" class="nav-item dropdown">
+        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+        		aria-haspopup="true" aria-expanded="false">Executive</a>
+       			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          			<a class="dropdown-item" href="../myClubs/calendar/html">Calendar</a>
+          			<a class="dropdown-item" href="../myClubs/chat.html">Chat</a>
+          			<a class="dropdown-item" href="../myClubs/chat.html">Events</a>
+        		</div>
+      		 </li>
+		    </ul>
+		  </div>
+	</nav>
+	
+	<div class="container" id="homeLogo">
+  		<div class="row">
+ 			<div class="col-sm-4 offset-sm-4">
+  				<img id="clubHubLogo" src="../img/logo.png" alt="Club Hub Logo Image">
+  			</div>
   		</div>
-  		<div class="dropdown">
-		 	<button class="dropbtn">Executive</button>
-	  		<div class="dropdown-content">
-	    		<a href="../../executive/clubs.html">Calendar</a>
-	    		<a href="../../executive/events.html">Chat</a>
-	    		<a href="../../executive/bbq.html">Events</a>
-	  		</div>
-  		</div>
-	</div>
-	<br>
-	<form id="searchForm" action="get">	
-		<input type="text" id="search" name="search" placeholder="Search..">
-		<script>
-		$("#searchForm").submit(function(){
-			event.preventDefault();
-			search();
-		});	
-		
-		function search() {
-			var URL= "../clubs/";
-			var clubs= "";
-			var resultsNum = 0;
-			$.get(URL)
-			.done(function(data, status) {
-				var search = new RegExp($("#search").val(), "i");
-				$.each(data, function(index, value) {
-					if(value.match(search) != null) {
-						resultsNum++;
-						clubs = clubs + "<a href=" + "'clubPages/robogals.html'>" + value + '</a>' + '<br />';
+    </div>
+    
+	<div class="container" id="searchFormSection">
+		<div class="row">
+			<div class="col-sm-6 offset-sm-3">
+				<h1>Search Clubs</h1>
+			</div>
+		</div>
+  		<form id="searchForm" action="get">	
+			<input class="form-control" id="search" type="text" name="search" placeholder="Search.." required>
+			<script>
+			$("#searchForm").submit(function(){
+				event.preventDefault();
+				search();
+			});	
+			
+			function search() {
+				var URL= "../clubs/";
+				var clubs= "";
+				var resultsNum = 0;
+				$.get(URL)
+				.done(function(data, status) {
+					var search = new RegExp($("#search").val(), "i");
+					$.each(data, function(index, value) {
+						if(value.match(search) != null) {
+							resultsNum++;
+							clubs = clubs + "<div class=" + "'container'" + "id=" + "'resultsDisplay'>" + "<button type =" + "'button'" + "class=" + 
+							"'btn btn-outline-primary'" + ">" + "<a href=" + "'clubPages/robogals.html'>" + value + 
+							'</a>' + '</div>';
+						}
+					});
+					if (resultsNum > 0) {
+						$("#results").append(clubs);
+					} else {
+						$("#results").html("No results were returned for that search");
 					}
 				});
-				if (resultsNum > 0) {
-					$("#results").append(clubs);
-				} else {
-					$("#results").html("No results were returned for that search");
-				}
-			});
-		}	
-		
-		</script>	
-	</form>
-	<div id="results">
-		<br />
-		<br />
-		<br />
+			}	
+			
+			</script>	
+		</form>
+	</div>
+	
+	<div class="col-sm-6 offset-sm-3">
+		<div id="results">
+		</div>
 	</div>
 	
   </body>
