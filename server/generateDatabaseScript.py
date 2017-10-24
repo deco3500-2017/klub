@@ -1,6 +1,7 @@
 import requests
 
 ADD_USER_URL = "http://localhost:8080/users/"
+ADD_CLUB_URL = "http://localhost:8080/clubs/"
 ADD_MEMBER_URL = "http://localhost:8080/clubs/{}/members/{}"
 ADD_EXECUTIVE_URL = "http://localhost:8080/clubs/{}/executives/{}"
 
@@ -8,6 +9,8 @@ ADD_EXECUTIVE_URL = "http://localhost:8080/clubs/{}/executives/{}"
 users = [('MegaBeth', 'ilovecats', 'Beth Cave', 'beth@clubcub.com', 's1234567'), 
 		('Leggy', 'iloveducks', 'Lachlan Healey', 'leggy@cluhub.com', 's1234555'),
 		('krista', '<3cats', 'Krista Harrison', 'someemail', 's1231232')]
+
+clubs = [('robogals', 'Robogals UQ', 'Description!!!\nLine 2', 'Short summary here', 'robogals.png', 2, 'volunteering\ndiversity')]
 
 members = [('MegaBeth', 'robogals')]
 
@@ -19,6 +22,14 @@ def add_user(user):
 
 	if request.status_code != 200:
 		print ('Status', request.status_code, 'on adding user', username)
+
+
+def add_club(club):
+	request = requests.post(ADD_CLUB_URL, 
+		data={'clubname': club[0], 'name': club[1], 'description': club[2], 'summary': club[3], 'logo': club[4], 'membershipPrice': club[5], 'tags': club[6]})
+
+	if request.status_code != 200:
+		print ('Status', request.status_code, 'on adding club', club[0])
 
 
 def add_member(member):
@@ -38,6 +49,9 @@ def add_executive(executive):
 if __name__ == "__main__":
 	for user in users:
 		add_user(user)
+
+	for club in clubs:
+		add_club(club);
 
 	for member in members:
 		add_member(member)

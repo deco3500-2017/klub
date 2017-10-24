@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Database {
 	
-	private final String url = "jdbc:sqlite:pings.db";
+	private final String url = "jdbc:sqlite:klub.db";
 	
 	private static Database INSTANCE;
 	

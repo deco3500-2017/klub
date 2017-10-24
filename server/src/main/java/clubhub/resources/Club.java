@@ -13,11 +13,11 @@ public class Club {
 
 	// Contact details
 	private String logo;
-	private float membershipPrice;
+	private int membershipPrice;
 	private List<String> tags;
 
-	public Club(String clubname, String name, String summary, List<String> description, String logo,
-			float membershipPrice, List<String> tags) {
+	public Club(String clubname, String name, List<String> description, String summary, String logo,
+			int membershipPrice, List<String> tags) {
 		this.clubname = clubname;
 		this.name = name;
 		this.summary = summary;
@@ -65,7 +65,7 @@ public class Club {
 	/**
 	 * @return the membershipPrice
 	 */
-	public float getMembershipPrice() {
+	public int getMembershipPrice() {
 		return membershipPrice;
 	}
 

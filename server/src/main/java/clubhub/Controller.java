@@ -2,6 +2,7 @@ package clubhub;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -25,20 +26,12 @@ public class Controller {
 	 */
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/member")
 	public List<String> userClubs(@PathVariable String username) {
-		List<String> clubs = new ArrayList<String>();
-		clubs.add("doglovers");
-		clubs.add("robogals");
-		clubs.add("uqrobotics");
-		return clubs;
+		return ClubDAO.getUsersClubs(username);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}/clubs/executive")
 	public List<String> userExecutive(@PathVariable String username) {
-		List<String> clubs = new ArrayList<String>();
-		if (username.equals("Leggy")) {
-			clubs.add("robogals");
-		}
-		return clubs;
+		return ClubDAO.getUsersClubsExecutive(username);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, path = "/users/{username}")
@@ -46,6 +39,7 @@ public class Controller {
 		return UserDAO.getUser(username);
 	}
 
+	
 	@RequestMapping(method = RequestMethod.POST, path = "/users")
 	public User addUser(@RequestParam(value = "username", required = true) String username,
 			@RequestParam(value = "password", required = true) String password, 
@@ -55,25 +49,44 @@ public class Controller {
 		return UserDAO.addUser(username, password, name, email, studentNumber);
 	}
 	
+	
+	
+	
 	/*
 	 * Clubs endpoints
 	 */
 	
+	@RequestMapping(method = RequestMethod.POST, path = "/clubs")
+	public Club addClub(@RequestParam(value = "clubname", required = true) String clubname,
+			@RequestParam(value = "name", required = true) String name,
+			@RequestParam(value = "description", required = true) String description, 
+			@RequestParam(value = "summary", required = true) String summary, 
+			@RequestParam(value = "logo", required = true) String logo, 
+			@RequestParam(value = "membershipPrice", required = true) String membershipPrice, 
+			@RequestParam(value = "tags", required = true) String tags) {
+		System.out.println("Adding club: " + clubname);
+		return ClubDAO.addClub(clubname, name, description, summary, logo, membershipPrice, tags);
+	}
+	
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs")
-	public List<String> listClubs() {
-		List<String> clubs = new ArrayList<String>();
-		clubs.add("Dog Lovers");
-		clubs.add("Robogals");
-		clubs.add("UQ Robotics");
-		clubs.add("Pizza Appreciation Society");
-		clubs.add("Spaghetti Fan Club");
-		return clubs;
+	public Map<String, String> listClubs() {
+		return ClubDAO.getClubs();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs/{clubname}")
 	public Club club(@PathVariable String clubname) {
-		return new Club("robogals", "Robogals UQ", "Summary", new ArrayList<String>(), "images/robogals.png", 2.0f, new ArrayList<String>());
+		return ClubDAO.getClub(clubname);
 	}
+	
+	
+	
+	
+	
+	
+	
+	/*
+	 * Club Membership
+	 */
 	
 	@RequestMapping(method = RequestMethod.POST, path = "/clubs/{clubname}/members/{username}")
 	public int addMember(@PathVariable String username, @PathVariable String clubname) {
