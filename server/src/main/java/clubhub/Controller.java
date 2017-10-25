@@ -63,9 +63,12 @@ public class Controller {
 			@RequestParam(value = "summary", required = true) String summary, 
 			@RequestParam(value = "logo", required = true) String logo, 
 			@RequestParam(value = "membershipPrice", required = true) String membershipPrice, 
-			@RequestParam(value = "tags", required = true) String tags) {
+			@RequestParam(value = "tags", required = true) String tags,
+			@RequestParam(value = "website", required = true) String website,
+			@RequestParam(value = "facebook", required = true) String facebook,
+			@RequestParam(value = "twitter", required = true) String twitter) {
 		System.out.println("Adding club: " + clubname);
-		return ClubDAO.addClub(clubname, name, description, summary, logo, membershipPrice, tags);
+		return ClubDAO.addClub(clubname, name, description, summary, logo, membershipPrice, tags, website, facebook, twitter);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs")
