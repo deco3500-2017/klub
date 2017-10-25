@@ -27,7 +27,7 @@ public class UserDAO {
 			PreparedStatement statement = Database.getInstance().getConnection().prepareStatement(GET_USER);
 			statement.setString(1, username);
 			ResultSet set = statement.executeQuery();
-			if(!set.isBeforeFirst() ) {
+			if(!(set.isBeforeFirst())) {
 				set.close();
 				return null;
 			}
@@ -57,7 +57,6 @@ public class UserDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return getUser(username);
 		
 	}
