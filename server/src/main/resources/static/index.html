@@ -119,11 +119,11 @@
 							if(data.password == $("#password").val()) {
 							localStorage.clear("username");
 							localStorage.setItem("username", $("#username").val());
-							console.log(localStorage.getItem("username"));
 						} else {
 							$("#errorDiv").html("<p>Sorry, that username or password is incorrect. Please try again.</p>");
 						}
 					})
+					<!--TODO: when promise (so user isn't redirected when login fails)-->
 					.then(function(result){
 						var URL = "/users/{0}/clubs/member".format(localStorage.getItem("username"));
 						return $.get(URL);				
@@ -151,27 +151,27 @@
 
 		  	<div class="form-group">
 				<label for="name">Name</label>
-				<input class="form-control" id="name" type="text" required>
+				<input class="form-control" id="accountName" type="text" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="username">Username</label>
-				<input class="form-control" id="username" type="text" required>
+				<input class="form-control" id="accountUsername" type="text" required>
 			</div>
 		  
 		 	<div class="form-group">
 				<label for="password">Password</label>
-				<input class="form-control" id="password" type="password" required>
+				<input class="form-control" id="accountPassword" type="password" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="email">UQ Email</label>
-				<input class="form-control" id="email" type="text" required>
+				<input class="form-control" id="accountEmail" type="text" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="studentNumber">Student Number</label>
-				<input class="form-control" id="studentNumber" type="text" maxlength='8' required>
+				<input class="form-control" id="accountStudentNumber" type="text" maxlength='8' required>
 			</div>
 			
 			<button id="createAccount" type="submit">Create Account</button>
@@ -187,10 +187,11 @@
 				
 				function createAccount() {
 					var URL= "users";
+					
 					<!--TODO: check for duplicate users-->
-					$.post(URL, { username: $("#username").val(), password: $("#password").val(),
-						name: $("#name").val(), email: $("#email").val(), 
-						studentNumber: $("#studentNumber").val()})
+					$.post(URL, { username: $("#accountUsername").val(), password: $("#accountPassword").val(),
+						name: $("#accountName").val(), email: $("#accountEmail").val(), 
+						studentNumber: $("#accountStudentNumber").val()})
 					.done(function(data, status) {
 						$("#createAccountForm").trigger("reset");
 						alert("You have successfully registered. Please login above.");				
