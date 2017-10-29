@@ -18,20 +18,23 @@
     </script>
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   </head>
    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-  
-  	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   
+   <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top home-nav">
+		  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
-		    <ul class="navbar-nav">
+		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="#loginFormSection">Login</a>
+		        <a class="nav-link nav-link-2" href="#loginFormSection">LOGIN</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#register">Register</a>
+		        <a class="nav-link nav-link-2" href="#register">REGISTER</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -39,8 +42,8 @@
 	
 	<script>
     $(document).ready(function(){
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Add smooth scrolling to all links in navbar + arrow link
+      $(".navbar a, .home a").on('click', function(event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           // Prevent default anchor click behavior
@@ -75,34 +78,38 @@
   
 
   
-  	<div class="container" id="home">
-  		<div class="row">
- 			<div class="col-sm-4 offset-sm-4">
-  				<img id="clubHubLogo" src="img/logo.png" alt="Club Hub Logo Image">
-  			</div>
-  		</div>
+  	<div class="container home">
+	  	<div class="container">
+	  		<div class="row">
+	 			<div class="col-sm-4 offset-sm-4">
+	  				<a href="#loginFormSection">
+	  					<img id="clubHubLogo" src="img/logo_light_purple.svg" alt="Club Hub Logo Image">
+	  				</a>
+	  			</div>
+	  		</div>
+	  	</div>
     </div>
   
 
 	<div class="container" id="loginFormSection">
 		<div class="row">
 			<div class="col-sm-2 offset-sm-5">
-				<h1>Login</h1>
+				<h1>LOGIN</h1>
 			</div>
 		</div>
   		<form id="logonForm">
-	  		<div id="logonDiv" class="container">
+	  		<div class="container indexForm">
 	  			<div class="form-group">
-					<label for="username">Username</label>
+					<label for="username">USERNAME</label>
 					<input class="form-control" id="username" type="text" required>
 				</div>
 	
 				<div class="form-group">
-					<label for="password">Password</label>
+					<label for="password">PASSWORD</label>
 					<input class="form-control" id="password" type="password" required>
 				</div>
-				
-				<button id="login" type="submit">Login</button>
+
+				<button id="login" type="submit" class="btn btn-outline-dark">LOGIN</button>
 			
 				<div id="errorDiv"></div>
 			
@@ -143,64 +150,73 @@
   <div class="container" id="register">
 		<div class="row">
 			<div class="col-sm-2 offset-sm-5">
-				<h1>Register</h1>
+				<h1>REGISTER</h1>
 			</div>
 		</div>
 			
 	  	<form id="createAccountForm">
+			<div class="container indexForm">
+			  	<div class="form-group">
+					<label for="name">NAME</label>
+					<input class="form-control" id="accountName" type="text" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="username">USERNAME</label>
+					<input class="form-control" id="accountUsername" type="text" required>
+				</div>
+			  
+			 	<div class="form-group">
+					<label for="password">PASSWORD</label>
+					<input class="form-control" id="accountPassword" type="password" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="email">UQ EMAIL</label>
+					<input class="form-control" id="accountEmail" type="text" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="studentNumber">STUDENT NUMBER</label>
+					<input class="form-control" id="accountStudentNumber" type="text" maxlength='8' required>
+				</div>
 
-		  	<div class="form-group">
-				<label for="name">Name</label>
-				<input class="form-control" id="accountName" type="text" required>
-			</div>
-			
-			<div class="form-group">
-				<label for="username">Username</label>
-				<input class="form-control" id="accountUsername" type="text" required>
-			</div>
-		  
-		 	<div class="form-group">
-				<label for="password">Password</label>
-				<input class="form-control" id="accountPassword" type="password" required>
-			</div>
-			
-			<div class="form-group">
-				<label for="email">UQ Email</label>
-				<input class="form-control" id="accountEmail" type="text" required>
-			</div>
-			
-			<div class="form-group">
-				<label for="studentNumber">Student Number</label>
-				<input class="form-control" id="accountStudentNumber" type="text" maxlength='8' required>
-			</div>
-			
-			<button id="createAccount" type="submit">Create Account</button>
-			
-			<script>
-				<!-- TODO: form validation -->
-				
-				$("#createAccountForm").submit(function(){
-				console.log("submitting");
-					event.preventDefault();
-					createAccount();
-				});
-				
-				function createAccount() {
-					var URL= "users";
+				<button id="createAccount" type="submit" class="btn btn-outline-dark">CREATE ACCOUNT</button>
+				<script>
+					<!-- TODO: form validation -->
 					
-					<!--TODO: check for duplicate users-->
-					$.post(URL, { username: $("#accountUsername").val(), password: $("#accountPassword").val(),
-						name: $("#accountName").val(), email: $("#accountEmail").val(), 
-						studentNumber: $("#accountStudentNumber").val()})
-					.done(function(data, status) {
-						$("#createAccountForm").trigger("reset");
-						alert("You have successfully registered. Please login above.");				
+					$("#createAccountForm").submit(function(){
+					console.log("submitting");
+						event.preventDefault();
+						createAccount();
 					});
-				};
-			</script>
-	  	
+					
+					function createAccount() {
+						var URL= "users";
+						
+						<!--TODO: check for duplicate users-->
+						$.post(URL, { username: $("#accountUsername").val(), password: $("#accountPassword").val(),
+							name: $("#accountName").val(), email: $("#accountEmail").val(), 
+							studentNumber: $("#accountStudentNumber").val()})
+						.done(function(data, status) {
+							$("#createAccountForm").trigger("reset");
+							alert("You have successfully registered. Please login above.");				
+						});
+					};
+				</script>
+	  		</div>
 	  	</form>
-	  
+  
 	 </div>
+	 
+	 <div class="container footer">
+		<div class="row">
+			<div class="col-sm-12">
+				<p>&copy; Bethany Cave, Krista Harrison, &amp; Lachlan Healey 2017</p>
+			</div>
+		</div>
+	</div>
+			
+			
   </body>
 </html>
