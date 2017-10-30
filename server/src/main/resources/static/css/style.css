@@ -68,9 +68,15 @@ p {
 	text-align:center;
 }
 
-.btn btn-outline-dark {
-	font-family: 'Roboto', sans-serif !important;
-	font-weight:300;
+.btn {
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+
+.resultsButton:hover a {
+	color:#f0f0f0 !important;
 }
 
 #loginFormSection {
@@ -104,6 +110,22 @@ p {
 .boxSection {
 	background-color:#f0f0f0;
 	height:600px;
+	margin-top:200px;
+	box-shadow: 5px 5px 2.5px #888888;
+	border-radius: 10px;
+}
+
+.welcomeSectionClubs {
+	background-color:#e1d4e6;
+	height:1600px;
+	margin-top:136px;
+	width:100%;
+	margin:0;
+}
+
+.boxSectionClubs {
+	background-color:#f0f0f0;
+	height:1200px;
 	margin-top:200px;
 	box-shadow: 5px 5px 2.5px #888888;
 	border-radius: 10px;
@@ -156,14 +178,18 @@ p {
 	margin-top:5%;
 }
 
-#interestsTitle {
-	font-size:3vh;
-}
-
 #robogalsLinks {
-	padding-left:8%;
+	padding-left:10%;
 	margin-top:2%;
 	
+}
+
+#interestsSection {
+	margin-top:5%;
+}
+
+#joinSection {
+	margin-top:2%;
 }
 
 .robogalsAbout {
@@ -174,19 +200,17 @@ p {
 	text-align:left;
 }
 
-#facebookLogo{
-	width:50px;
-	padding:1%;
+.socialsLogo{
+	width:25%;
+	padding:3%;
 }
 
-#twitterLogo{
-	width:50px;
-	padding:1%;
+#joinClub {
+	width:100%;
 }
 
-#webLogo {
-	width:50px;
-	padding:1%;
+#membership {
+	margin-top:5%;
 }
 
 #scheduler_here {

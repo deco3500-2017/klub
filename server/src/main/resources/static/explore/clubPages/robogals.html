@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <title>Robogals</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<script>
 	var club = "robogals";
 	
@@ -36,26 +35,35 @@
 	});
 
     </script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="../../css/style.css" rel="stylesheet" type="text/css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-</head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+	</head>
+
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	
+	<nav class="navbar navbar-expand-sm navbar-light fixed-top">
+		 <a class="navbar-brand" href="../../index.html">
+    		<img src="../../img/logo_landscape.png" height="56px" alt="Club Hub Logo and link to Home Page">
+  		</a>
+	</nav>
+	
+	<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top fixed-top-2">
+		  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNav">
-		    <ul class="navbar-nav">
+		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item">
-		        <a class="nav-link" href="../../home.html">About</a>
+		        <a class="nav-link nav-link-2" href="../../home.html">About</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="../../explore/search.html">Explore</a>
+		        <a class="nav-link nav-link-2" href="../search.html">Explore</a>
 		      </li>
 		      <li class="nav-item dropdown">
-        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+        		<a class="nav-link nav-link-2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
         		aria-haspopup="true" aria-expanded="false">My Clubs</a>
        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           			<a class="dropdown-item" href="../../myClubs/calendar.html">Calendar</a>
@@ -63,7 +71,7 @@
         		</div>
       		 </li>
       		 <li id="execMenu" class="nav-item dropdown">
-        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+        		<a class="nav-link nav-link-2 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
         		aria-haspopup="true" aria-expanded="false">Executive</a>
        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
           			<a class="dropdown-item" href="../../executive/events.html">Events</a>
@@ -74,85 +82,99 @@
 		  </div>
 	</nav>
 	
-	<div class="container" id="homeLogo">
-  		<div class="row">
- 			<div class="col-sm-4 offset-sm-4">
-  				<img id="clubHubLogo" src="../../img/logo.png" alt="Club Hub Logo Image">
-  			</div>
-  		</div>
-    </div>
-
-	<div class="container" id="robogalsTitle">
-		<div class="row">
-			<div class="col-sm-4 offset-sm-4">
-				<h2>ROBOGALS</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4 offset-sm-4">
-				<p id="interests">Volunteering, Teaching, Networking, Socialising</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4 offset-sm-4">	
-				<p id="membership">Membership Fees: $2 </p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-2 offset-sm-5">	
-				<button class="btn btn-outline-primary" id="joinClub">Join Robogals</button>
-				<script>
-					$("#joinClub").click(function(){
-						var URL = "/clubs/{0}/members/{1}".format(club, localStorage.getItem("username"));
-						var statusString;
-						$.post(URL)
-						.done(function(data, status){
-							statusString = status.toString();
-						})
-						.then(function(result){
-							return $.get("/clubs/{0}/executives/".format(club));
-						})
-						.then(function(result){
-							alert(result);
-							alert(statusString + "\nPlease contact one of the following members" + 
-									" to pay your membership fee or troubleshoot difficulties in" +
-									" joining this club: \n" + result);
-						})
-					});
-				</script>
-			</div>
-		</div>
+	<div class="container welcomeSectionClubs">
+		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 offset-sm-4" id="robogalsLinks">	
-					<a href="http://brisbane.robogals.org.au/"><img src="../../img/web.png" alt="Website Link Logo" id="webLogo"></a>
-					<a href="https://www.facebook.com/groups/robogalsVolunteers/"><img src="../../img/facebook.png" alt="Facebook Logo" id="facebookLogo"></a>
-					<a href="https://twitter.com/RobogalsUQ"><img src="../../img/twitter.png" alt="Twitter Logo" id="twitterLogo"></a>
+				<div class="col-sm-10 offset-sm-1 boxSectionClubs">
+					<div class="container" id="robogalsTitle">
+						
+						<div class="row">
+							<div class="col-sm-8 offset-sm-2">
+								<h2>Robogals</h2>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 offset-sm-3" id="robogalsLinks">	
+								<a href="http://brisbane.robogals.org.au/"><img src="../../img/globe.svg" alt="Website Link Logo" class="socialsLogo"></a>
+								<a href="https://www.facebook.com/groups/robogalsVolunteers/"><img src="../../img/facebook.svg" alt="Facebook Logo" class="socialsLogo"></a>
+								<a href="https://twitter.com/RobogalsUQ"><img src="../../img/twitter.svg" alt="Twitter Logo" class="socialsLogo"></a>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-8 offset-sm-2" id="interestsSection">
+								<p >Volunteering, Teaching, Networking, Socialising</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-6 offset-sm-3" id="joinSection">	
+								<button class="btn btn-outline-dark" id="joinClub">Join Robogals</button>
+								<script>
+									$("#joinClub").click(function(){
+										var URL = "/clubs/{0}/members/{1}".format(club, localStorage.getItem("username"));
+										var statusString;
+										$.post(URL)
+										.done(function(data, status){
+											statusString = status.toString();
+										})
+										.then(function(result){
+											return $.get("/clubs/{0}/executives/".format(club));
+										})
+										.then(function(result){
+											alert(result);
+											alert(statusString + "\nPlease contact one of the following members" + 
+													" to pay your membership fee or troubleshoot difficulties in" +
+													" joining this club: \n" + result);
+										})
+									});
+								</script>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 offset-sm-4" id="membership">	
+								<p>Membership Fees: $2 </p>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-6 robogalsAbout">
+								<p class="aboutText">We encourage school aged girls to pursue Science, Technology, Engineering and Math (STEM) through holding 
+								workshops at schools, universities and libraries because <em>diversity drives innovation</em>.</p>
+								<p class="aboutText">We have a friendly, warm and genuine culture which provides support for club members. Robogals offers opportunities 
+								to develop skills such as public speaking and communication skills. Additionally, we connect university students to companies that value a 
+								gender inclusive workplace.</p>
+								<p class="aboutText">All faculties are welcome as we provide training.</p>	
+							</div>
+							<div class="col-sm-6 robogalsAbout">
+								<p class="aboutText">Throughout the year, Robogals holds numerous events including: (all events are not age restrictive)</p>
+								<p class="aboutText">
+								<ul type="disc">
+									<li><span style="text-decoration: underline;">Launch nights</span> welcoming volunteers with pizza and board games.</li>
+									<li>Volunteer-run <span style="text-decoration: underline;">workshops</span> for school students</li>
+									<li><span style="text-decoration: underline;">Rural trips</span>&nbsp;where volunteers travel to rural Queensland for a week to inspire young minds. Past locations have included: Sunshine Coast, Gladstone and Townsville*</li>
+									<li>An <span style="text-decoration: underline;">Industry Gala</span> to connect university students to companies that value a gender inclusive workplace</li>
+									<li><span style="text-decoration: underline;">Social events</span>: from having lunch to bowling and laser tag!</li>
+								</ul></p>
+								<p class="aboutText">*Rural trips are free for Robogals members</p>	
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</div>
+		</div>
 	</div>
 	
-	<div class="container">
-	
+	<div class="container footer">
 		<div class="row">
-			<div class="col-sm-6 robogalsAbout">
-				<p class="aboutText">We encourage school aged girls to pursue Science, Technology, Engineering and Math (STEM) through holding 
-				workshops at schools, universities and libraries because <em>diversity drives innovation</em>.</p>
-				<p class="aboutText">We have a friendly, warm and genuine culture which provides support for club members. Robogals offers opportunities 
-				to develop skills such as public speaking and communication skills. Additionally, we connect university students to companies that value a 
-				gender inclusive workplace.</p>
-				<p class="aboutText">All faculties are welcome as we provide training.</p>	
-			</div>
-			<div class="col-sm-6 robogalsAbout">
-				<p class="aboutText">Throughout the year, Robogals holds numerous events including: (all events are not age restrictive)</p>
-				<p class="aboutText">
-				<ul type="disc">
-					<li><span style="text-decoration: underline;">Launch nights</span> welcoming volunteers with pizza and board games.</li>
-					<li>Volunteer-run <span style="text-decoration: underline;">workshops</span> for school students</li>
-					<li><span style="text-decoration: underline;">Rural trips</span>&nbsp;where volunteers travel to rural Queensland for a week to inspire young minds. Past locations have included: Sunshine Coast, Gladstone and Townsville*</li>
-					<li>An <span style="text-decoration: underline;">Industry Gala</span> to connect university students to companies that value a gender inclusive workplace</li>
-					<li><span style="text-decoration: underline;">Social events</span>: from having lunch to bowling and laser tag!</li>
-				</ul></p>
-				<p class="aboutText">*Rural trips are free for Robogals members</p>	
+			<div class="col-sm-12">
+				<p>&copy; Bethany Cave, Krista Harrison, &amp; Lachlan Healey 2017</p>
 			</div>
 		</div>
 	</div>
