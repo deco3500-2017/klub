@@ -4,7 +4,6 @@
     <title>Robogals</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
-	var club = "robogals";
 	
     $(document).ready(function() {
         String.prototype.format = function () {
@@ -17,6 +16,41 @@
 		};	
     });
     
+    //Copy from here -->
+    //write the clubname for the page
+    var clubname = "robogals";
+	var name;
+	var summary;
+	var description;
+	var logo;
+	var membershipPrice;
+	var tags;
+	var website;
+	var facebook;
+	var twitter;
+	
+	$(document).ready(function() {
+		var URL = "../../clubs/{0}".format(clubname);
+		alert(URL);
+    	$.get(URL)
+    	.done(function(data, status){
+    		name = data.name;
+    		summary = data.summary;
+    		description = data.description;
+    		logo = data.logo;
+    		membershipPrice = data.membershipPrice;
+    		tags = data.tags;
+    		website = data.website;
+    		facebook = data.facebook;
+    		twitter = data.twitter;
+    		$("#heading").html(name);
+    		//do as above ^^ for other elements (eg. $("#twitter").html(twitter));
+    		//Just set the IDs of any html elements that need to be populated by the above variables :)
+    	})		
+    });
+    
+    //<-- to here
+    
     var exec = true;
 	$(document).ready(function(){
 		var URL = "/users/{0}/clubs/executive".format(localStorage.getItem("username"));
@@ -28,9 +62,6 @@
     		if(!exec) {
     			$("#execMenu").hide();
         	}
-    		scheduler.config.readonly = !(exec);
-    		<!--combo box or radio buttons here -->	
-    		scheduler.init('scheduler_here',new Date(2018,0,1),"week");
     	})		
 	});
 
@@ -90,7 +121,7 @@
 						
 						<div class="row">
 							<div class="col-sm-8 offset-sm-2">
-								<h2>Robogals</h2>
+								<h2 id="heading"></h2>
 							</div>
 						</div>
 
@@ -123,7 +154,6 @@
 											return $.get("/clubs/{0}/executives/".format(club));
 										})
 										.then(function(result){
-											alert(result);
 											alert(statusString + "\nPlease contact one of the following members" + 
 													" to pay your membership fee or troubleshoot difficulties in" +
 													" joining this club: \n" + result);

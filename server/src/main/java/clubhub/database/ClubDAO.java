@@ -3,6 +3,7 @@ package clubhub.database;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -43,8 +44,7 @@ public class ClubDAO {
 				return null;
 			}
 			List<String> description = Arrays.asList(set.getString(3).split("\n"));
-			List<String> tags = Arrays.asList(set.getString(7).split("\n"));
-
+			List<String> tags = Arrays.asList(set.getString(7).split("\n"));			
 			result = new Club(set.getString(1), set.getString(2), description, set.getString(4), set.getString(5),
 					set.getInt(6), tags, set.getString(8), set.getString(9), set.getString(10));
 			set.close();
