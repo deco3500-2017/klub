@@ -53,8 +53,6 @@ public class MembershipDAO {
 			}
 			while(set.next()) {
 				result.add(set.getString(1));
-				System.out.println("Found member: " + set.getString(1));
-
 			}
 			set.close();
 			return result;
@@ -98,9 +96,6 @@ public class MembershipDAO {
 				return -1;
 			}
 			int result = set.getInt(1);
-			System.out.println("result = " + result);
-			System.out.println("username: " + username);
-			System.out.println("clubname: " + clubname);
 
 			set.close();
 			return result;

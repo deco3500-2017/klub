@@ -15,9 +15,13 @@ public class Club {
 	private String logo;
 	private int membershipPrice;
 	private List<String> tags;
+	
+	private String website;
+	private String facebook;
+	private String twitter;
 
 	public Club(String clubname, String name, List<String> description, String summary, String logo,
-			int membershipPrice, List<String> tags) {
+			int membershipPrice, List<String> tags, String website, String facebook, String twitter) {
 		this.clubname = clubname;
 		this.name = name;
 		this.summary = summary;
@@ -25,6 +29,10 @@ public class Club {
 		this.logo = logo;
 		this.membershipPrice = membershipPrice;
 		this.tags = tags;
+		
+		this.website = website;
+		this.facebook = facebook;
+		this.twitter = twitter;
 	}
 
 	/**
@@ -74,6 +82,27 @@ public class Club {
 	 */
 	public List<String> getTags() {
 		return tags;
+	}
+
+	/**
+	 * @return the website
+	 */
+	public String getWebsite() {
+		return website;
+	}
+
+	/**
+	 * @return the facebook
+	 */
+	public String getFacebook() {
+		return facebook;
+	}
+
+	/**
+	 * @return the twitter
+	 */
+	public String getTwitter() {
+		return twitter;
 	}
 
 }
