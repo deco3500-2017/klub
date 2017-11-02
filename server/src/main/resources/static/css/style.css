@@ -58,6 +58,15 @@ h2 {
 	font-weight:500;
 	letter-spacing:2px;
 	text-transform: uppercase;
+	font-size:4vh !important;
+}
+
+h3 {
+	text-align:center;
+	font-weight:500;
+	letter-spacing:2px;
+	text-transform: uppercase;
+	font-size:3vh !important;
 }
 
 h3 {
@@ -101,7 +110,7 @@ p {
 
 .welcomeSection {
 	background-color:#e1d4e6;
-	height:1000px;
+	height:1500px;
 	margin-top:136px;
 	width:100%;
 	margin:0;
@@ -109,7 +118,7 @@ p {
 
 .boxSection {
 	background-color:#f0f0f0;
-	height:600px;
+	height:1100px;
 	margin-top:200px;
 	box-shadow: 5px 5px 2.5px #888888;
 	border-radius: 10px;
@@ -279,6 +288,13 @@ p {
     text-align:center;
     font-family: 'Roboto', sans-serif !important;
     font-weight:300;
+}
+
+.modal-content {
+	color:#000000;
+	background-color:#f0f0f0;
+	font-family: 'Roboto', sans-serif !important;
+	
 }
 
 .footer p {
