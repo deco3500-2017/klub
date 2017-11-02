@@ -28,9 +28,6 @@
     		if(!exec) {
     			$("#execMenu").hide();
         	}
-    		scheduler.config.readonly = !(exec);
-    		<!--combo box or radio buttons here -->	
-    		scheduler.init('scheduler_here',new Date(2018,0,1),"week");
     	})		
 	});
    
@@ -126,7 +123,7 @@
 									if(value.match(search) != null) {
 										resultsNum++;
 										clubs = clubs + "<div class=" + "'container'" + "id=" + "'resultsDisplay'>" + "<button type =" + "'button'" + "class=" + 
-										"'btn btn-outline-dark resultsButton'" + ">" + "<a href=" + "'clubPages/robogals.html'>" + value + 
+										"'btn btn-outline-dark resultsButton'" + ">" + "<a href=" + "'clubPages/" + index + ".html'>" + value + 
 										'</a>' + '</div>';
 									}
 								});

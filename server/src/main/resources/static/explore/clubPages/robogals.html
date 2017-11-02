@@ -31,7 +31,6 @@
 	
 	$(document).ready(function() {
 		var URL = "../../clubs/{0}".format(clubname);
-		alert(URL);
     	$.get(URL)
     	.done(function(data, status){
     		name = data.name;
