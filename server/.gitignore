@@ -9,6 +9,7 @@ out/
 
 #Database
 clubhub.db
+*.db
 
 # Gradle
 build/
