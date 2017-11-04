@@ -3,8 +3,8 @@ package clubhub.database;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -23,6 +23,8 @@ public class ClubDAO {
 			+ " website text NOT NULL, facebook text NOT NULL, twitter text NOT NULL);";
 
 	private static final String GET_CLUB = "SELECT * FROM clubs WHERE clubname = ?;";
+	
+	private static final String GET_ALL_CLUBS = "SELECT clubname, name, description, summary, logo, membershipPrice, tags, website, facebook, twitter FROM clubs;";
 	
 	private static final String GET_CLUBS = "SELECT clubname, name FROM clubs";
 
@@ -47,6 +49,29 @@ public class ClubDAO {
 			List<String> tags = Arrays.asList(set.getString(7).split("\n"));			
 			result = new Club(set.getString(1), set.getString(2), description, set.getString(4), set.getString(5),
 					set.getInt(6), tags, set.getString(8), set.getString(9), set.getString(10));
+			set.close();
+			return result;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static List<Club> getAllClubs() {
+		verifyTable();
+		List<Club> result = new ArrayList<Club>();
+		try {
+			PreparedStatement statement = Database.getInstance().getConnection().prepareStatement(GET_ALL_CLUBS);
+			ResultSet set = statement.executeQuery();
+			
+			if (set.isBeforeFirst()) {
+				while(set.next()) {
+					List<String> description = Arrays.asList(set.getString(3).split("\n"));
+					List<String> tags = Arrays.asList(set.getString(7).split("\n"));			
+					result.add(new Club(set.getString(1), set.getString(2), description, set.getString(4), set.getString(5),
+							set.getInt(6), tags, set.getString(8), set.getString(9), set.getString(10)));
+				}
+			}
 			set.close();
 			return result;
 		} catch (SQLException e) {

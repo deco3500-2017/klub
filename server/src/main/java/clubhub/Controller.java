@@ -1,5 +1,6 @@
 package clubhub;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,33 @@ import clubhub.resources.User;
 
 @RestController
 public class Controller {
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/search/{searchString}")
+	public List<Club> search(@PathVariable String searchString) {
+		String[] searchParameters = searchString.split(" ");
+		List<Club> resultClubs = new ArrayList<Club>();
+		List<Club> allClubs = ClubDAO.getAllClubs();
+		
+		for(Club club : allClubs) {
+			for(String searchParam : searchParameters) {
+				
+				if(club.getTags().contains(searchParam)) {
+					resultClubs.add(club);
+					continue;
+				} else if (club.getDescription().toString().contains(searchParam)) {
+					resultClubs.add(club);
+					continue;
+				} else if (club.getSummary().contains(searchParam)){
+					resultClubs.add(club);
+					continue;
+				} else if(club.getClubname().contains(searchParam) || club.getName().contains(searchParam)) {
+					resultClubs.add(club);
+					continue;
+				}
+			}
+		}
+		return resultClubs;
+	}
 	
 	/*
 	 * Users endpoints
@@ -67,12 +95,19 @@ public class Controller {
 			@RequestParam(value = "facebook", required = true) String facebook,
 			@RequestParam(value = "twitter", required = true) String twitter) {
 		System.out.println("Adding club: " + clubname);
+		System.out.println("Summary: " + summary);
 		return ClubDAO.addClub(clubname, name, description, summary, logo, membershipPrice, tags, website, facebook, twitter);
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs")
 	public Map<String, String> listClubs() {
 		return ClubDAO.getClubs();
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/clubs/all")
+	public List<Club> allClubs() {
+		List<Club> allClubs = ClubDAO.getAllClubs();
+		return allClubs;
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs/{clubname}")
