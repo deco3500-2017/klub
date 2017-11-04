@@ -1,14 +1,47 @@
 html, body {
-	background-color:#ffffff !important;
+	font-family: 'Roboto', sans-serif !important;
+	font-weight:300;
 }
 
-#home {
-	margin-top:20%;
-	height:100vh;
+.navbar {
+	font-family: 'Roboto', sans-serif;
+	font-weight:300;
+	background-color:#f0f0f0;
 }
 
-#homeLogo {
-	margin-top:10%;
+.home-nav {
+	background-color:#49075E !important;
+}
+
+.fixed-top-2 {
+    margin-top: 80px;
+    background-color:#49075E !important;
+}
+
+.nav-link-2 {
+	color:#F0F0F0 !important;
+}
+
+.home {
+	padding-top:10%;
+	height:800px;
+	background-color:#f0f0f0;
+}
+
+#clubHubLogo {
+	width:50%;
+	margin-left:20%;
+	margin-top:80px;	
+}
+
+#chatImage {
+	width:100%;
+}
+
+#handImage {
+	width:50%;
+	margin-left:25%;
+	margin-top:50px;
 }
 
 
@@ -18,11 +51,26 @@ html, body {
 
 h1 {
 	text-align:center;
+	font-weight:500;
+	letter-spacing:2px;
+	text-transform:uppercase;
 	font-size: 5vh !important;
 }
 
 h2 {
 	text-align:center;
+	font-weight:500;
+	letter-spacing:2px;
+	text-transform: uppercase;
+	font-size:4vh !important;
+}
+
+h3 {
+	text-align:center;
+	font-weight:500;
+	letter-spacing:2px;
+	text-transform: uppercase;
+	font-size:3vh !important;
 }
 
 h3 {
@@ -33,20 +81,107 @@ p {
 	text-align:center;
 }
 
-#clubHubLogo {
-	width:100%;	
+.btn {
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+
+.resultsButton:hover a {
+	color:#f0f0f0 !important;
 }
 
 #loginFormSection {
 	padding-top:20%;
-	height:100vh;
-	width:100vh;
+	height:800px;
+	width:100%;
+	margin:0;
+	background-color:#e1d4e6;
+}
+
+.indexForm {
+	width:75%;
 }
 
 #register {
 	padding-top:10%;
-	height:100vh;
-	width:100vh;
+	height:800px;
+	width:100%;
+	margin:0;
+	background-color:#f0f0f0;
+}
+
+.welcomeSection {
+	background-color:#e1d4e6;
+	height:1500px;
+	margin-top:136px;
+	width:100%;
+	margin:0;
+}
+
+.boxSection {
+	background-color:#f0f0f0;
+	height:1100px;
+	margin-top:200px;
+	box-shadow: 5px 5px 2.5px #888888;
+	border-radius: 10px;
+}
+
+.welcomeSectionClubs {
+	background-color:#e1d4e6;
+	height:1600px;
+	margin-top:136px;
+	width:100%;
+	margin:0;
+}
+
+.boxSectionClubs {
+	background-color:#f0f0f0;
+	height:1200px;
+	margin-top:200px;
+	box-shadow: 5px 5px 2.5px #888888;
+	border-radius: 10px;
+}
+
+.welcomeSectionCalendar {
+	background-color:#e1d4e6;
+	height:1100px;
+	margin-top:136px;
+	width:100%;
+	margin:0;
+}
+
+.boxSectionCalendar {
+	background-color:#f0f0f0;
+	height:700px;
+	margin-top:200px;
+	box-shadow: 5px 5px 2.5px #888888;
+	border-radius: 10px;
+}
+
+.welcomeSectionChat {
+	background-color:#e1d4e6;
+	height:1600px;
+	margin-top:136px;
+	width:100%;
+	margin:0;
+}
+
+.boxSectionChat {
+	background-color:#f0f0f0;
+	height:1200px;
+	margin-top:200px;
+	box-shadow: 5px 5px 2.5px #888888;
+	border-radius: 10px;
+}
+
+.textSectionChat {
+	margin-top:100px;
+}
+
+.imageSectionChat {
+	margin-top:50px;
 }
 
 #welcome {
@@ -57,38 +192,61 @@ p {
 	padding-top:2%;
 }
 
+#chatText {
+	padding-top:5%;
+}
+
 #aboutClubHub {
 	margin-top:5%;
 }
 
 #searchFormSection {
 	margin-top:5%;
-	width:100vh;
+	width:100%;
+}
+
+#searchForm {
+	padding-top:2%;
+}
+
+#results {
+	margin-top:10%;
 }
 
 #resultsDisplay {
 	margin-top:5%;
-	margin-left:20%;
-	width:20%;
-	float:left;
+	width:100%;
+}
+
+.resultsButton {
+	width:100%;
 }
 
 #resultsDisplay a {
-	color:black;
+	color:#000000;
+	text-decoration:none;
+}
+
+#resultsDisplay a:hover {
+	color:#f0f0f0;
 }
 
 #robogalsTitle {
 	margin-top:5%;
 }
 
-#interestsTitle {
-	font-size:3vh;
-}
-
 #robogalsLinks {
-	padding-left:8%;
+	padding-left:10%;
 	margin-top:2%;
 	
+}
+
+#interestsSection {
+	margin-top:5%;
+}
+
+#joinSection {
+	margin-top:2%;
 }
 
 .robogalsAbout {
@@ -99,21 +257,69 @@ p {
 	text-align:left;
 }
 
-#facebookLogo{
-	width:50px;
-	padding:1%;
+.socialsLogo{
+	width:25%;
+	padding:3%;
 }
 
-#twitterLogo{
-	width:50px;
-	padding:1%;
+#joinClub {
+	width:100%;
 }
 
-#webLogo {
-	width:50px;
-	padding:1%;
+#membership {
+	margin-top:5%;
 }
 
 #scheduler_here {
 	margin-top:5%;
+}
+
+.scheduleContainer {
+	height:600px;
+}
+
+.dhx_cal_container {
+	background-color:#f0f0f0 !important;
+}
+
+.dhx_cal_container div{
+	font-family: 'Roboto', sans-serif !important;
+	background-color:#f0f0f0 !important;
+}
+
+.dhx_cal_event div{
+        background-color:#49075E !important;
+        color: #f0f0f0 !important;
+}    
+    
+.footer {
+	width:100%;
+	height:56px;
+    background-color:#49075E !important;
+    color:#F0F0F0 !important;
+    text-align:center;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight:300;
+}
+
+.modal-content {
+	color:#000000;
+	background-color:#f0f0f0;
+	font-family: 'Roboto', sans-serif !important;
+	
+}
+
+.footer p {
+	margin-top:20px;
+	font-size:15px;
+}
+
+@media (min-width:250px) {
+	.container {
+	max-width:1600px;
+	}
+	#clubHubLogo {
+	min-width:150px;
+	max-width:300px;
+	}
 }

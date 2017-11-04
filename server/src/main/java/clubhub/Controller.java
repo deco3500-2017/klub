@@ -1,6 +1,5 @@
 package clubhub;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -79,13 +78,7 @@ public class Controller {
 	@RequestMapping(method = RequestMethod.GET, path = "/clubs/{clubname}")
 	public Club club(@PathVariable String clubname) {
 		return ClubDAO.getClub(clubname);
-	}
-	
-	
-	
-	
-	
-	
+	}	
 	
 	/*
 	 * Club Membership
