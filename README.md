@@ -99,7 +99,7 @@ The following results were obtained:
 
 We then moved onto implementing our first prototype. Changes were made as a result of the initial testing, including notifications when a club has been joined, and the inclusion of the calendar in the navigation bar.
 
-##2.3 Initial Prototype and User Testing
+### 2.3 Initial Prototype and User Testing
 The initial prototype was tested with users at the showcase. The prototype provided basic integration with the backend (ability to register, login, and search). Users were able to navigate the prototype themselves, or view a demonstration.
 
 ![Initial Prototype Welcome Screen](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig9.JPG)
@@ -110,20 +110,18 @@ The initial prototype was tested with users at the showcase. The prototype provi
 
 The following results were obtained from talking with users at the showcase:
 
+![Results from Showcase User Testing](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig12.png)
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2012.png “Fig. 12 - Results from showcase user testing”)
-			
 We then moved into implementing our second prototype, taking on board feedback about branding, and tag searching.
 
-##2.4 Second Prototype
+### 2.4 Second Prototype
 
 The second prototype implemented a fully styled website. Users are now able to see information about the purpose of the site from the landing page, view a news feed of the next five events and top news items from their clubs,  and search by tags as well as club names. Events can also be added to the calendar by executives, and these can be viewed by members.
 
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2013.png “Fig. 13 - Welcome screen on second prototype”)
+![Welcome Screen on Second Prototype](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig13.png)
 
-
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2014.png “Fig. 14 - Search page on second prototype”)
+![Search Page on Second Prototype](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig14.png)
 
 ![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2015.png “Fig. 15 - Even adding by executive on second prototype”)
 
