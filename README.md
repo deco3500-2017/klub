@@ -123,26 +123,25 @@ The second prototype implemented a fully styled website. Users are now able to s
 
 ![Search Page on Second Prototype](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig14.png)
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2015.png “Fig. 15 - Even adding by executive on second prototype”)
+![Event adding by Executive on Second Prototype](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig15.png)
 
-##2.5 Limitations and Future Developments
+### 2.5 Limitations and Future Developments
+
 Not all features identified through interaction with users have been implemented in the current prototype. We faced limits in the user groups we could meet, and if the project was to continue, it would be beneficial to branch our user research further afield within the UQ Clubs community.
 
-In terms of functionality, a future sprint would ideally implement the following:
-Use of UQ single signon for registering
-Ability to log in and out
-Faculty based searching
-Push notification for event creation/cancellation
-Club branding on individual pages (this was unable to be obtained for the current state)
-Separate page under my clubs listing those the user is a member of
-Integration with UQ academic calendar
+* In terms of functionality, a future sprint would ideally implement the following:
+* Use of UQ single signon for registering
+* Ability to log in and out
+* Faculty based searching
+* Push notification for event creation/cancellation
+* Club branding on individual pages (this was unable to be obtained for the current state)
+* Separate page under my clubs listing those the user is a member of
+* Integration with UQ academic calendar
 
-##3.0  Team Roles
+## 3.0  Team Roles
 
 The roles for each team member can be viewed on the following system architecture diagram.
 
-
-Figure 5.1 - System architecture diagram with team roles
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2016.png “Fig. 16 - System architecture diagram with team roles”)
+![System Architecture Diagram with Team Roles](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig16.png)
 
 Specific work done by each team member can be seen under [issues](https://github.com/deco3500-2017/klub/issues), where each member is assigned to the issues they worked on. Individual code contributions can be seen under Insights: [Lachlan](https://github.com/deco3500-2017/klub/commits?author=Leggy), [Beth](https://github.com/deco3500-2017/klub/commits?author=bethcave) and [Krista](https://github.com/deco3500-2017/klub/commits?author=kristasusanne). 
