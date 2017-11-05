@@ -5,20 +5,22 @@
 **Krista Harrison, Bethany Cave, Lachlan Healey**
 
 ## Promotional Material
-![Logo](https://raw.githubusercontent.com/deco3500-2017/klub/master/poster.pdf)
-![Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
+[Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
-#Link to Prototype
+##Link to Prototype
 [Prototype]()
-###Start up guide 
+
+##Startup Guide 
 
 ##1.0 Summary
 As a group we were interested in the domain of Active Communities. We were most interested in the UQ Club Hub proposal by Chunnan Zheng.
 
-##1.1 Problem space
+##1.1 Problem Space
 
-![ALt text](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%201.png “Fig. 1 - Initial interest in idea”)
+![Problem space image](https://raw.githubusercontent.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig1.png)
+
+(https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%201.png “Fig. 1 - Initial interest in idea”)
 
 Now that we had chosen a project, we set out to do some requirements gathering amongst UQ students involved in Clubs and Societies. In doing so, we sought to understand the gaps and pain points in the existing management solutions used by club members and executives and thus elicit concrete user requirements for our application. 
 
