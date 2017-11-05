@@ -8,24 +8,24 @@
 [Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
-##Link to Prototype
+## Link to Prototype
 [Prototype]()
 
-##Startup Guide 
+## Startup Guide 
 
-##1.0 Summary
+## 1.0 Summary
 As a group we were interested in the domain of Active Communities. We were most interested in the UQ Club Hub proposal by Chunnan Zheng.
 
-##1.1 Problem Space
+### 1.1 Problem Space
 
 ![Problem space image](https://raw.githubusercontent.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig1.png)
 
-(https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%201.png “Fig. 1 - Initial interest in idea”)
+![Other test](https://github.com/deco3500-2017/klub/blob/master/process%DocumentImage/Fig1.png)
 
 Now that we had chosen a project, we set out to do some requirements gathering amongst UQ students involved in Clubs and Societies. In doing so, we sought to understand the gaps and pain points in the existing management solutions used by club members and executives and thus elicit concrete user requirements for our application. 
 
-
-###Requirements gathering
+
+### Requirements gathering
 A survey was undertaken, which had 45 respondents, and focussed  on both members (71.1%) and executives (51.1%) of clubs within The University of Queensland. Some respondents were both a member and executive of one or more clubs, and three respondents (6.7%) noted they were a UQ student, but not a member of any club.
 
 ![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%202.png “Fig. 2 - requirements gathering: club discovery”)
@@ -50,7 +50,7 @@ use the platform the club communicates on regularly.
 
 
 
-###Comments received from users
+### Comments received from users
 
 We received the following comments in response to the question: “For club members: do you experience any difficulties or frustrations due to the way the clubs of which you are a member communicate? (eg. difficult to sign up, difficult to find out when events are on, difficult to communicate with other members/executives etc.)”. 
 
@@ -75,10 +75,10 @@ Most common platforms are: facebook, slack, email. We need to find out what the 
 People are definitely missing out on events because the way they use social media doesn’t match up with how their clubs use social media. Having a central solution as means everyone can access it.
 Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
 
-##1.2 Solution
+### 1.2 Solution
 ![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%205.png “Fig. 5 - Solution to problem space”)
 
-##2.0 Design Process
+## 2.0 Design Process
 
 The design process undertook four sprints, utilising a continuous integration agile approach. This meant that the deliverables changed in response to user feedback.
 
@@ -86,10 +86,10 @@ The design process undertook four sprints, utilising a continuous integration ag
 ![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%206.png “Fig. 6 - Flowchart of design process followed”)
 
 
-##2.1 Requirements gathering
+### 2.1 Requirements gathering
 As discussed in the summary. Full requirements gathering survey can be found [here](https://drive.google.com/open?id=1RX8f_5-7ecg3biKNERLyUZ0BNYmZVsHLftTuJbTUWM4).
 
-##2.2 Mockup and User Testing
+### 2.2 Mockup and User Testing
 
 User interviews were conducted with executives of two UQ clubs, and these supported the findings from the requirements survey.
 
