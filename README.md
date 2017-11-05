@@ -1,11 +1,12 @@
-# KLUB PROGRESS DOCUMENATATION: ClubHub
+# KLUB Progress Documentation: ClubHub
 
 **DECO3500 SEMESTER 2 2017**
 
 **Krista Harrison, Bethany Cave, Lachlan Healey**
 
 ## Promotional Material
-![Poster](https://raw.githubusercontent.com/deco3500-2017/klub/blob/master/poster.pdf)
+![Logo](https://raw.githubusercontent.com/deco3500-2017/klub/master/logo.png)
+![Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
 #Link to Prototype
