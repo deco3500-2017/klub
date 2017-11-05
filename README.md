@@ -5,7 +5,7 @@
 **Krista Harrison, Bethany Cave, Lachlan Healey**
 
 ## Promotional Material
-![Logo](https://raw.githubusercontent.com/deco3500-2017/klub/master/logo.png)
+![Logo](https://raw.githubusercontent.com/deco3500-2017/klub/master/poster.pdf)
 ![Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
