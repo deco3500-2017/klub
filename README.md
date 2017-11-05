@@ -18,9 +18,7 @@ As a group we were interested in the domain of Active Communities. We were most 
 
 ### 1.1 Problem Space
 
-![Problem space image](https://raw.githubusercontent.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig1.png)
-
-![Other test](https://github.com/deco3500-2017/klub/blob/master/process%DocumentImage/Fig1.png)
+![Problem Space Description Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig1.png)
 
 Now that we had chosen a project, we set out to do some requirements gathering amongst UQ students involved in Clubs and Societies. In doing so, we sought to understand the gaps and pain points in the existing management solutions used by club members and executives and thus elicit concrete user requirements for our application. 
 
