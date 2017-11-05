@@ -26,27 +26,22 @@ Now that we had chosen a project, we set out to do some requirements gathering a
 ### Requirements gathering
 A survey was undertaken, which had 45 respondents, and focussed  on both members (71.1%) and executives (51.1%) of clubs within The University of Queensland. Some respondents were both a member and executive of one or more clubs, and three respondents (6.7%) noted they were a UQ student, but not a member of any club.
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%202.png “Fig. 2 - requirements gathering: club discovery”)
+![Requirements Gathering Membership Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig2.png)
 
 Most students found out about their clubs by word of mouth, market day and facebook. 
 The problems that arise from this are: 
-Market day only happens once a semester, which means: limited exposure for clubs, especially as they are competing for attention; students can only see so many clubs on the day; students who miss out on market day miss out on one of the main avenues for finding out about clubs 
-Word of mouth relies upon people have connections to students who are already members of a club. This automatically excludes groups of people who aren’t already connected in the Clubs and Societies space. 
-Many people don’t use Facebook or have too much activity to keep up with on Facebook, leading to them missing out on club announcements/activity. Furthermore, clubs that use Facebook pages (as opposed to groups) to communicate with their members can be disadvantaged by the Facebook algorithm, which won’t necessarily ensure that users who like a page will see all of its posts (at least without the club paying for sponsored posts). 
+* Market day only happens once a semester, which means: limited exposure for clubs, especially as they are competing for attention; students can only see so many clubs on the day; students who miss out on market day miss out on one of the main avenues for finding out about clubs 
+* Word of mouth relies upon people have connections to students who are already members of a club. This automatically excludes groups of people who aren’t already connected in the Clubs and Societies space. 
+* Many people don’t use Facebook or have too much activity to keep up with on Facebook, leading to them missing out on club announcements/activity. Furthermore, clubs that use Facebook pages (as opposed to groups) to communicate with their members can be disadvantaged by the Facebook algorithm, which won’t necessarily ensure that users who like a page will see all of its posts (at least without the club paying for sponsored posts). 
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%203.png “Fig. 3 - requirements gathering: club communication”)
+![Requirements Gathering Communication Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig3.png)
 
 Facebook, email and slack are most common channels of communication for clubs in those surveyed. From this we gathered that there must be elements of those platforms which are useful for maintaining a club’s online presence. 
 
-
-
-
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%204.png “Fig. 4 - requirements gathering: missing out”)
+![Requirements Gathering Missed Information Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig4.png)
 
 There are at least some club members who are missing out on events because they don’t 
 use the platform the club communicates on regularly. 
-
-
 
 ### Comments received from users
 
@@ -74,15 +69,14 @@ People are definitely missing out on events because the way they use social medi
 Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
 
 ### 1.2 Solution
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%205.png “Fig. 5 - Solution to problem space”)
+![Solution to problem space image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig5.png)
 
 ## 2.0 Design Process
 
 The design process undertook four sprints, utilising a continuous integration agile approach. This meant that the deliverables changed in response to user feedback.
 
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%206.png “Fig. 6 - Flowchart of design process followed”)
-
+![Flowchart of Design Process Followed](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig6.png)
 
 ### 2.1 Requirements gathering
 As discussed in the summary. Full requirements gathering survey can be found [here](https://drive.google.com/open?id=1RX8f_5-7ecg3biKNERLyUZ0BNYmZVsHLftTuJbTUWM4).
@@ -97,29 +91,22 @@ After conducting user interviews, a [navigable mockup](https://projects.invision
 
 User testing asked participants to perform the following tasks:
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%207.png “Fig. 7 - User testing tasks for navigable mockup”)
+![User Testing Tasks for Navigable Mockup Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig7.png)
 
 The following results were obtained: 
 
-
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%208.png “Fig. 8 - Results from navigable mockup testing session”)
+![User Testing Results Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig8.png)
 
 We then moved onto implementing our first prototype. Changes were made as a result of the initial testing, including notifications when a club has been joined, and the inclusion of the calendar in the navigation bar.
 
 ##2.3 Initial Prototype and User Testing
 The initial prototype was tested with users at the showcase. The prototype provided basic integration with the backend (ability to register, login, and search). Users were able to navigate the prototype themselves, or view a demonstration.
 
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%209.png “Fig. 9 - Welcome page from initial prototype”)
+![Initial Prototype Welcome Screen](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig9.JPG)
 
+![Initial Prototype Search Screen](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig10.png)
 
-
-
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2010.png “Fig. 10 - Search page from initial prototype”)
-
-
-
-
-![](https://github.com/deco3500-2017/klub/blob/master/Process%20Document%20Images/Fig.%2011.png “Fig. 11 - Club page from initial prototype”)
+![Initial Prototype Robogals Screen](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig11.png)
 
 The following results were obtained from talking with users at the showcase:
 
