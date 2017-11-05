@@ -23,7 +23,7 @@ As a group we were interested in the domain of Active Communities. We were most 
 Now that we had chosen a project, we set out to do some requirements gathering amongst UQ students involved in Clubs and Societies. In doing so, we sought to understand the gaps and pain points in the existing management solutions used by club members and executives and thus elicit concrete user requirements for our application. 
 
 
-### Requirements gathering
+### 1.2 Requirements gathering
 A survey was undertaken, which had 45 respondents, and focussed  on both members (71.1%) and executives (51.1%) of clubs within The University of Queensland. Some respondents were both a member and executive of one or more clubs, and three respondents (6.7%) noted they were a UQ student, but not a member of any club.
 
 ![Requirements Gathering Membership Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig2.png)
@@ -43,7 +43,7 @@ Facebook, email and slack are most common channels of communication for clubs in
 There are at least some club members who are missing out on events because they don’t 
 use the platform the club communicates on regularly. 
 
-### Comments received from users
+### 1.3 Comments received from users
 
 We received the following comments in response to the question: “For club members: do you experience any difficulties or frustrations due to the way the clubs of which you are a member communicate? (eg. difficult to sign up, difficult to find out when events are on, difficult to communicate with other members/executives etc.)”. 
 
@@ -68,7 +68,7 @@ Most common platforms are: facebook, slack, email. We need to find out what the 
 People are definitely missing out on events because the way they use social media doesn’t match up with how their clubs use social media. Having a central solution as means everyone can access it.
 Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
 
-### 1.2 Solution
+### 1.4 Solution
 ![Solution to problem space image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig5.png)
 
 ## 2.0 Design Process
