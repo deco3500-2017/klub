@@ -4,15 +4,6 @@
 
 **Krista Harrison, Bethany Cave, Lachlan Healey**
 
-## Content
-1. [Introduction](https://github.com/deco3500-2017/klub/blob/master/README.md#10-promotional%20material)
-2. [Concept](https://github.com/deco3500-2017/klub/blob/master/proposal.md#20-concept)
-3. [Team](https://github.com/deco3500-2017/klub/blob/master/proposal.md#30-team)
-4. [Plan](https://github.com/deco3500-2017/klub/blob/master/proposal.md#40-plan)
-5. [Resources](https://github.com/deco3500-2017/klub/blob/master/proposal.md#50-resources)
-6. [Tags](https://github.com/deco3500-2017/klub/blob/master/proposal.md#60-tags)
-
-
 ## 1.0 Promotional Material
 [Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
