@@ -4,26 +4,35 @@
 
 **Krista Harrison, Bethany Cave, Lachlan Healey**
 
-## Promotional Material
+## Content
+1. [Introduction](https://github.com/deco3500-2017/klub/blob/master/README.md#10-promotional%20material)
+2. [Concept](https://github.com/deco3500-2017/klub/blob/master/proposal.md#20-concept)
+3. [Team](https://github.com/deco3500-2017/klub/blob/master/proposal.md#30-team)
+4. [Plan](https://github.com/deco3500-2017/klub/blob/master/proposal.md#40-plan)
+5. [Resources](https://github.com/deco3500-2017/klub/blob/master/proposal.md#50-resources)
+6. [Tags](https://github.com/deco3500-2017/klub/blob/master/proposal.md#60-tags)
+
+
+## 1.0 Promotional Material
 [Poster](https://github.com/deco3500-2017/klub/blob/master/poster.pdf)
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
-## Link to Prototype
+## 2.0 Link to Prototype
 [Prototype]()
 
-## Startup Guide 
+## 3.0 Startup Guide
 
-## 1.0 Summary
+## 4.0 Summary
 As a group we were interested in the domain of Active Communities. We were most interested in the UQ Club Hub proposal by Chunnan Zheng.
 
-### 1.1 Problem Space
+### 4.1 Problem Space
 
 ![Problem Space Description Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig1.png)
 
 Now that we had chosen a project, we set out to do some requirements gathering amongst UQ students involved in Clubs and Societies. In doing so, we sought to understand the gaps and pain points in the existing management solutions used by club members and executives and thus elicit concrete user requirements for our application. 
 
 
-### 1.2 Requirements gathering
+### 4.2 Requirements Gathering
 A survey was undertaken, which had 45 respondents, and focussed  on both members (71.1%) and executives (51.1%) of clubs within The University of Queensland. Some respondents were both a member and executive of one or more clubs, and three respondents (6.7%) noted they were a UQ student, but not a member of any club.
 
 ![Requirements Gathering Membership Image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig2.png)
@@ -43,7 +52,7 @@ Facebook, email and slack are most common channels of communication for clubs in
 There are at least some club members who are missing out on events because they don’t 
 use the platform the club communicates on regularly. 
 
-### 1.3 Comments received from users
+### 4.3 Comments Received from Users
 
 We received the following comments in response to the question: “For club members: do you experience any difficulties or frustrations due to the way the clubs of which you are a member communicate? (eg. difficult to sign up, difficult to find out when events are on, difficult to communicate with other members/executives etc.)”. 
 
@@ -68,20 +77,20 @@ Most common platforms are: facebook, slack, email. We need to find out what the 
 People are definitely missing out on events because the way they use social media doesn’t match up with how their clubs use social media. Having a central solution as means everyone can access it.
 Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
 
-### 1.4 Solution
+### 4.4 Solution
 ![Solution to problem space image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig5.png)
 
-## 2.0 Design Process
+## 5.0 Design Process
 
 The design process undertook four sprints, utilising a continuous integration agile approach. This meant that the deliverables changed in response to user feedback.
 
 
 ![Flowchart of Design Process Followed](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig6.png)
 
-### 2.1 Requirements gathering
+### 5.1 Requirements Gathering
 As discussed in the summary. Full requirements gathering survey can be found [here](https://drive.google.com/open?id=1RX8f_5-7ecg3biKNERLyUZ0BNYmZVsHLftTuJbTUWM4).
 
-### 2.2 Mockup and User Testing
+### 5.2 Mockup and User Testing
 
 User interviews were conducted with executives of two UQ clubs, and these supported the findings from the requirements survey.
 
@@ -99,7 +108,7 @@ The following results were obtained:
 
 We then moved onto implementing our first prototype. Changes were made as a result of the initial testing, including notifications when a club has been joined, and the inclusion of the calendar in the navigation bar.
 
-### 2.3 Initial Prototype and User Testing
+### 5.3 Initial Prototype and User Testing
 The initial prototype was tested with users at the showcase. The prototype provided basic integration with the backend (ability to register, login, and search). Users were able to navigate the prototype themselves, or view a demonstration.
 
 ![Initial Prototype Welcome Screen](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig9.JPG)
@@ -114,7 +123,7 @@ The following results were obtained from talking with users at the showcase:
 
 We then moved into implementing our second prototype, taking on board feedback about branding, and tag searching.
 
-### 2.4 Second Prototype
+### 5.4 Second Prototype
 
 The second prototype implemented a fully styled website. Users are now able to see information about the purpose of the site from the landing page, view a news feed of the next five events and top news items from their clubs,  and search by tags as well as club names. Events can also be added to the calendar by executives, and these can be viewed by members.
 
@@ -125,7 +134,7 @@ The second prototype implemented a fully styled website. Users are now able to s
 
 ![Event adding by Executive on Second Prototype](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig15.png)
 
-### 2.5 Limitations and Future Developments
+### 5.5 Limitations and Future Developments
 
 Not all features identified through interaction with users have been implemented in the current prototype. We faced limits in the user groups we could meet, and if the project was to continue, it would be beneficial to branch our user research further afield within the UQ Clubs community.
 
@@ -138,7 +147,7 @@ Not all features identified through interaction with users have been implemented
 * Separate page under my clubs listing those the user is a member of
 * Integration with UQ academic calendar
 
-## 3.0  Team Roles
+## 6.0  Team Roles
 
 The roles for each team member can be viewed on the following system architecture diagram.
 
