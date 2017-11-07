@@ -9,7 +9,7 @@
 [Brochure](https://github.com/deco3500-2017/klub/blob/master/brochure.pdf)
 
 ## 2.0 Link to Prototype
-[Prototype](leggy.org:8080)
+[Prototype](http://leggy.org:8080)
 
 ## 3.0 Startup Guide
 
