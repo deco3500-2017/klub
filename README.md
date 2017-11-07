@@ -11,6 +11,8 @@
 ## 2.0 Link to Prototype
 [Prototype](http://leggy.org:8080)
 
+(If link does not work, see **Startup Guide** below).
+
 ## 3.0 Startup Guide
  - Ensure that your system has the Java 8 JDK installed, and the `JAVA_HOME` environment variable set to the JDK location.
  - Clone the [ClubHub Repository](https://github.com/deco3500-2017/klub) using git.
