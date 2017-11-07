@@ -12,6 +12,11 @@
 [Prototype](http://leggy.org:8080)
 
 ## 3.0 Startup Guide
+ - Ensure that your system has the Java 8 JDK installed, and the `JAVA_HOME` environment variable set to the JDK location.
+ - Clone the [ClubHub Repository](https://github.com/deco3500-2017/klub) using git.
+ - Open the klub folder in your terminal, and into the server folder `cd path-to-klub/server`
+ - Run `./gradlew build run`
+ - Open a web browser at localhost:8080
 
 ## 4.0 Summary
 As a group we were interested in the domain of Active Communities. We were most interested in the UQ Club Hub proposal by Chunnan Zheng.
