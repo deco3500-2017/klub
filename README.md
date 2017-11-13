@@ -70,10 +70,10 @@ We received the following comments in response to the question: “For club memb
 
 The most important requirements we gathered from this process were:
 
-Users need a way to find out about clubs (not just through market day, facebook etc.).
-Most common platforms are: facebook, slack, email. We need to find out what the good elements of these are (since they must have something good about them bc everyone is using them) and then incorporate these aspects into our solution.
-People are definitely missing out on events because the way they use social media doesn’t match up with how their clubs use social media. Having a central solution as means everyone can access it.
-Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
+* Users need a way to find out about clubs (not just through market day, facebook etc.).
+* Most common platforms are: facebook, slack, email. We need to find out what the good elements of these are (since they must have something good about them because everyone is using them) and then incorporate these aspects into our solution.
+* People are definitely missing out on events because the way they use social media doesn’t match up with how their clubs use social media. Having a central solution means everyone can access it.
+* Some useful functionality (eg. sign up to clubs, paying membership fees) is completely absent from current solutions. We can fill these gaps in our solution.
 
 ### 4.4 Solution
 ![Solution to problem space image](https://github.com/deco3500-2017/klub/blob/master/processDocumentImages/Fig5.png)
